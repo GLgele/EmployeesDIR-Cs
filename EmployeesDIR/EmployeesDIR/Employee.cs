@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Ilog;
+//using Ilog;
 
 namespace EmployeesDIR
 {
@@ -44,7 +44,7 @@ namespace EmployeesDIR
         }
         public void Init()
         {
-            Ilog.Ilogger ilogger;
+            //Ilog.Ilogger ilogger;
         }
         public void AppendEmployee(int id, string name, string number, string comment, string email, string edu, string salary)
         {
