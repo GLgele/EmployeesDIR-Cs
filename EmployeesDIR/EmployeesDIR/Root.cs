@@ -21,8 +21,8 @@ namespace EmployeesDIR
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("EmployeesDIR\nVersion 3.0.0\nCopyright GLgele (c) 2022",General.title);
-            //Form errorform = new ErrorForm("aaa");
-            //errorform.Show();
+            Form errorform = new ErrorForm("aaa");
+            errorform.Show();
         }
 
         private void EmployeesDIR_Load(object sender, EventArgs e)

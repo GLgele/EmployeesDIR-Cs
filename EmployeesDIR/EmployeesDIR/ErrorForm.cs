@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,6 +64,26 @@ namespace EmployeesDIR
             {
                 errorLabel.Text = errmsg;
             }
+        }
+
+        private void viewLogButton_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo start = new ProcessStartInfo("explorer.exe");//设置运行的命令行文件问ping.exe文件，这个文件系统会自己找到
+            start.Arguments = "logs\\" + DateTime.Now.ToString("yyyyMMdd") + ".log";
+            start.CreateNoWindow = false;//不显示dos命令行窗口
+            start.RedirectStandardOutput = true;//
+            start.RedirectStandardInput = true;//
+            start.UseShellExecute = false;//是否指定操作系统外壳进程启动程序
+            Process p = Process.Start(start);
+            StreamReader reader = p.StandardOutput;//截取输出流
+            string line = reader.ReadLine();//每次读取一行
+            while (!reader.EndOfStream)
+            {
+                line = reader.ReadLine();
+            }
+            p.WaitForExit();//等待程序执行完退出进程
+            p.Close();//关闭进程
+            reader.Close();//关闭流
         }
     }
 }
