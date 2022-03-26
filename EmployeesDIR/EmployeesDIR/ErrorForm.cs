@@ -12,8 +12,15 @@ namespace EmployeesDIR
 {
     public partial class ErrorForm : Form
     {
+        private string errmsg = "";
         public ErrorForm()
         {
+            InitializeComponent();
+        }
+
+        public ErrorForm(string err)
+        {
+            errmsg = err;
             InitializeComponent();
         }
 
@@ -41,6 +48,20 @@ namespace EmployeesDIR
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void copyButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(errorLabel.Text);
+            MessageBox.Show("Message copied.", General.title, MessageBoxButtons.OK);
+        }
+
+        private void ErrorForm_Load(object sender, EventArgs e)
+        {
+            if(errmsg != "")
+            {
+                errorLabel.Text = errmsg;
+            }
         }
     }
 }

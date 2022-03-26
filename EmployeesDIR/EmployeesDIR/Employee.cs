@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using log4net;
 
 //using Ilog;
 
@@ -37,18 +38,21 @@ namespace EmployeesDIR
     class General
     {
         public static readonly string title = "EmployeesDIR - 3.0";
-        public Dictionary<int, Employee> employees;
+        public static readonly ILog logger = LogManager.GetLogger(typeof(Program));
+        public Dictionary<int,Employee> employees = new Dictionary<int,Employee>();
         General()
         {
-            Init();
-        }
-        public void Init()
-        {
-            //Ilog.Ilogger ilogger;
+            log4net.Config.BasicConfigurator.Configure();
+#if DEBUG
+            ((log4net.Repository.Hierarchy.Hierarchy)LogManager.GetRepository()).Root.Level = log4net.Core.Level.Debug;
+#else
+            ((log4net.Repository.Hierarchy.Hierarchy)LogManager.GetRepository()).Root.Level = log4net.Core.Level.Info;
+#endif
         }
         public void AppendEmployee(int id, string name, string number, string comment, string email, string edu, string salary)
         {
             employees.Add(id, new Employee(id, name, number, comment, email, edu, salary));
+            logger.InfoFormat("New employee:{name},id{id};{sex},{number},{comment},{email},{edu},{salary}", name, id, number, comment, email, edu, salary);
         }
     }
 }

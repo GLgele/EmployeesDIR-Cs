@@ -11,12 +11,15 @@ namespace EmployeesDIR
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
+
         [STAThread]
         static void Main()
         {
+            General.logger.Info("Entering application.");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new EmployeesDIR());
+            General.logger.Info("Exiting application.");
         }
     }
 }

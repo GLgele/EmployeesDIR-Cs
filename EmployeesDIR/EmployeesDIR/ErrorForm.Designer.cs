@@ -57,9 +57,9 @@ namespace EmployeesDIR
             // 
             // OKbutton
             // 
-            this.OKbutton.Location = new System.Drawing.Point(12, 478);
+            this.OKbutton.Location = new System.Drawing.Point(12, 466);
             this.OKbutton.Name = "OKbutton";
-            this.OKbutton.Size = new System.Drawing.Size(75, 23);
+            this.OKbutton.Size = new System.Drawing.Size(75, 35);
             this.OKbutton.TabIndex = 2;
             this.OKbutton.Text = "OK";
             this.OKbutton.UseVisualStyleBackColor = true;
@@ -67,12 +67,13 @@ namespace EmployeesDIR
             // 
             // copyButton
             // 
-            this.copyButton.Location = new System.Drawing.Point(195, 478);
+            this.copyButton.Location = new System.Drawing.Point(192, 466);
             this.copyButton.Name = "copyButton";
-            this.copyButton.Size = new System.Drawing.Size(75, 23);
+            this.copyButton.Size = new System.Drawing.Size(78, 35);
             this.copyButton.TabIndex = 3;
             this.copyButton.Text = "Copy";
             this.copyButton.UseVisualStyleBackColor = true;
+            this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
             // ErrorForm
             // 
@@ -85,6 +86,7 @@ namespace EmployeesDIR
             this.Controls.Add(this.infoLabel);
             this.Name = "ErrorForm";
             this.Text = "Error";
+            this.Load += new System.EventHandler(this.ErrorForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

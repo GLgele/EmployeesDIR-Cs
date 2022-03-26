@@ -21,11 +21,13 @@ namespace EmployeesDIR
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("EmployeesDIR\nVersion 3.0.0\nCopyright GLgele (c) 2022",General.title);
+            //Form errorform = new ErrorForm("aaa");
+            //errorform.Show();
         }
 
         private void EmployeesDIR_Load(object sender, EventArgs e)
         {
-            
+            //General.logger.LogInformation("Root winform loading. Event{0}",e.ToString());
         }
 
         private void exitItem_Click(object sender, EventArgs e)
@@ -34,8 +36,8 @@ namespace EmployeesDIR
             {
                 this.Close();
                 this.Dispose();
-                Application.Exit();
-                System.Environment.Exit(0);
+                //Application.Exit();
+                //System.Environment.Exit(0);
             }
         }
     }
