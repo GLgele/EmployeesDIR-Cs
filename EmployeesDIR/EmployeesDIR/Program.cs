@@ -26,7 +26,7 @@ namespace EmployeesDIR
         {
             General.logger.Info("Entering application.");
 #if DEBUG
-            AllocConsole();
+            //AllocConsole();
             //Application.SetHighDpiMode(HighDpiMode.SystemAware);
 #endif
             //Shell.Shell.WriteLine("Info:infotest");
@@ -34,7 +34,7 @@ namespace EmployeesDIR
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new EmployeesDIR());
             General.logger.Info("Exiting application.");
-            FreeConsole();
+            //FreeConsole();
         }
     }
 }
