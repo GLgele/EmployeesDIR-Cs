@@ -56,10 +56,10 @@
     </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>2AA236CC8103CDE470003117B89F060C257BCF89</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>17ED5E74897DCC1B00A99392DC8DE11657A77DFA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>EmployeesDIR_2_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>EmployeesDIR_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
