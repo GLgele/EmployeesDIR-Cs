@@ -35,7 +35,7 @@ namespace EmployeesCore
     class General
     {
         public static readonly string title = "EmployeesDIR - 3.0";
-        public static readonly Mylog.Mylog logger = new Mylog.Mylog() /*LogManager.GetLogger(typeof(Program))*/;
+        //public static readonly Mylog.Mylog logger = new Mylog.Mylog() /*LogManager.GetLogger(typeof(Program))*/;
         public Dictionary<int, Employee> employees = new Dictionary<int, Employee>();
         General()
         {
@@ -44,7 +44,7 @@ namespace EmployeesCore
         public void AppendEmployee(int id, string name, string number, string comment, string email, string edu, string salary)
         {
             employees.Add(id, new Employee(id, name, number, comment, email, edu, salary));
-            logger.InfoFormat("New employee:{name},id{id};{sex},{number},{comment},{email},{edu},{salary}", name, id, number, comment, email, edu, salary);
+             //logger.InfoFormat("New employee:{name},id{id};{sex},{number},{comment},{email},{edu},{salary}", name, id, number, comment, email, edu, salary);
         }
     }
 }

@@ -128,6 +128,6 @@ namespace EmployeesDIR
         private System.Windows.Forms.ToolStripMenuItem saveItem;
         private System.Windows.Forms.ToolStripMenuItem openItem;
         private System.Windows.Forms.ToolStripMenuItem exitItem;
-    }
+        }
 }
 

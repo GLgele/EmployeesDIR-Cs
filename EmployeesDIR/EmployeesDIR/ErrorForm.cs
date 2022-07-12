@@ -56,6 +56,7 @@ namespace EmployeesDIR
         private void copyButton_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(errorLabel.Text);
+            General.logger.InfoFormat("Set clipborad text: {0}",errorLabel.Text);
             MessageBox.Show("Message copied.", General.title, MessageBoxButtons.OK);
         }
 
@@ -70,7 +71,7 @@ namespace EmployeesDIR
 
         private void viewLogButton_Click(object sender, EventArgs e)
         {
-            ProcessStartInfo start = new ProcessStartInfo("explorer.exe");//设置运行的命令行文件问ping.exe文件，这个文件系统会自己找到
+            ProcessStartInfo start = new ProcessStartInfo("explorer.exe");//设置运行的命令行文件问explorer.exe文件，这个文件系统会自己找到
             start.Arguments = "logs\\" + DateTime.Now.ToString("yyyyMMdd") + ".log";
             start.CreateNoWindow = false;//不显示dos命令行窗口
             start.RedirectStandardOutput = true;//
