@@ -79,5 +79,20 @@ namespace EmployeesDIR
                 Application.Exit();
             }
         }
+
+        private void saveItem_Click(object sender, EventArgs e)
+        {
+            General.saveData();
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            General.AppendEmployee("name","sex","number","comment","email","edu","salary");
+        }
+
+        private void openItem_Click(object sender, EventArgs e)
+        {
+            General.openData();
+        }
     }
 }
