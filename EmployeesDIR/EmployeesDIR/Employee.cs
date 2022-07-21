@@ -84,6 +84,7 @@ namespace EmployeesDIR
                     }
                     file.Write("\n");
                 }
+                file.Close();
             }
             catch (Exception e)
             {
@@ -115,13 +116,14 @@ namespace EmployeesDIR
             try
             {
                 BinaryReader file = new BinaryReader(new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read));
-                int n = Convert.ToInt32(file.Read());
+                int n = Convert.ToInt32(file.ReadInt32());
+                byte[] fw = file.ReadBytes(3);
                 for(int i=0;i<n;i++)
                 {
                     List<string> lst = new List<string>();
                     string tmp = "";
                     char chr = 'A';
-                    for (int ii = 0;i<7;i++)
+                    for (int ii = 0;ii<7;ii++)
                     {
                         //lst.Add(file.Read());
                         while(chr != ' ')
@@ -130,9 +132,12 @@ namespace EmployeesDIR
                             tmp += chr;
                         }
                         lst.Add(tmp);
+                        tmp = "";
+                        chr = '\0';
                     }
                     AppendEmployee(lst);
                 }
+                file.Close();
             }
             catch (Exception e)
             {
