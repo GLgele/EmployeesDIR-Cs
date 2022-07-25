@@ -56,7 +56,7 @@
     </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>1DFA7FB3BC98FBADFB56A5DBBF0D8F2C400A29DB</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>17ED5E74897DCC1B00A99392DC8DE11657A77DFA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>EmployeesDIR_TemporaryKey.pfx</ManifestKeyFile>
@@ -158,6 +158,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shell.cs" />
+    <Compile Include="trans.cs" />
     <EmbeddedResource Include="ErrorForm.resx">
       <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +176,7 @@
     </Compile>
     <None Include=".editorconfig" />
     <None Include="EmployeesDIR_TemporaryKey.pfx" />
+    <None Include="lang\en_us.json" />
     <None Include="log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

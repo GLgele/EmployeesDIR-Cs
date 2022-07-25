@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,8 +43,13 @@ namespace EmployeesDIR
 
     class General
     {
+        [DllImport("kernel32")]
+        private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
+        [DllImport("kernel32")]
+        private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
         public static readonly string title = "EmployeesDIR - 3.0";
         public static readonly Mylog.Mylog logger = new Mylog.Mylog() /*LogManager.GetLogger(typeof(Program))*/;
+        public static string iniFilePath = "settings.ini";
         public static List<Employee> employees = new List<Employee>();
         General()
         {
@@ -117,7 +123,7 @@ namespace EmployeesDIR
             {
                 BinaryReader file = new BinaryReader(new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read));
                 int n = Convert.ToInt32(file.ReadInt32());
-                byte[] fw = file.ReadBytes(3);
+                byte[] fw = file.ReadBytes(2);
                 for(int i=0;i<n;i++)
                 {
                     List<string> lst = new List<string>();
@@ -131,6 +137,7 @@ namespace EmployeesDIR
                             chr = file.ReadChar();
                             tmp += chr;
                         }
+                        tmp = tmp.Substring(1);
                         lst.Add(tmp);
                         tmp = "";
                         chr = '\0';
@@ -145,6 +152,29 @@ namespace EmployeesDIR
                 ErrorForm error = new ErrorForm(e.Message);
                 error.Show();
             }
+        }
+        /// <summary> 
+        /// 写⼊INI⽂件
+        /// </summary> 
+        /// <param name="iniFilePath">ini文件路径</param>
+        /// <param name="field">项⽬名称(如 [TypeName] )</param> 
+        /// <param name="Key">键</param> 
+        /// <param name="Value">值</param> 
+        public static void GetValueOfKey(string iniFilePath, string field, string Key, string Value)
+        {
+            WritePrivateProfileString(field, Key, Value, iniFilePath);
+        }
+        /// <summary> 
+        /// 读出INI⽂件
+        /// </summary> 
+        /// <param name="iniPath">ini文件路径</param>
+        /// <param name="field">项⽬名称(如 [TypeName] )</param> 
+        /// <param name="Key">键</param> 
+        public static string IniReadValue(string iniPath, string field, string Key)
+        {
+            StringBuilder temp = new StringBuilder(500);
+            int i = GetPrivateProfileString(field, Key, "", temp, 500, iniPath);
+            return temp.ToString();
         }
         public static void AppendEmployee(/*int id, */string name, string sex, string number, string comment, string email, string edu, string salary)
         {

@@ -19,6 +19,14 @@ namespace EmployeesDIR
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(Form_Closing);
         }
 
+        private void Flush_Window()
+        {
+            foreach (Employee emp in General.employees)
+            {
+                listBox1.Items.Add(emp.GetInfo()[0]);
+            }
+        }
+
         private void Form_Closing(object sender, FormClosingEventArgs e)
         {
             switch (e.CloseReason)
@@ -70,6 +78,12 @@ namespace EmployeesDIR
         private void EmployeesDIR_Load(object sender, EventArgs e)
         {
             General.logger.InfoFormat("Root winform loading. Event{0}",e.ToString());
+#if DEBUG
+            testToolStripMenuItem.Enabled = true;
+#else
+            testToolStripMenuItem.Enabled = false;
+#endif
+            Flush_Window();
         }
 
         private void exitItem_Click(object sender, EventArgs e)
@@ -88,11 +102,38 @@ namespace EmployeesDIR
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
             General.AppendEmployee("name","sex","number","comment","email","edu","salary");
+            Flush_Window();
         }
 
         private void openItem_Click(object sender, EventArgs e)
         {
             General.openData();
+            Flush_Window();
+        }
+
+        private void helpMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
