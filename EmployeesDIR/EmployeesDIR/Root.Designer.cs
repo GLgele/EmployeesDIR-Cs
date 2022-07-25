@@ -33,15 +33,15 @@ namespace EmployeesDIR
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.saveItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.newEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,21 +73,28 @@ namespace EmployeesDIR
             // saveItem
             // 
             this.saveItem.Name = "saveItem";
-            this.saveItem.Size = new System.Drawing.Size(180, 22);
+            this.saveItem.Size = new System.Drawing.Size(122, 22);
             this.saveItem.Text = "Save";
             this.saveItem.Click += new System.EventHandler(this.saveItem_Click);
             // 
             // openItem
             // 
             this.openItem.Name = "openItem";
-            this.openItem.Size = new System.Drawing.Size(180, 22);
+            this.openItem.Size = new System.Drawing.Size(122, 22);
             this.openItem.Text = "Open";
             this.openItem.Click += new System.EventHandler(this.openItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // exitItem
             // 
             this.exitItem.Name = "exitItem";
-            this.exitItem.Size = new System.Drawing.Size(180, 22);
+            this.exitItem.Size = new System.Drawing.Size(122, 22);
             this.exitItem.Text = "Exit";
             this.exitItem.Click += new System.EventHandler(this.exitItem_Click);
             // 
@@ -99,6 +106,12 @@ namespace EmployeesDIR
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(85, 21);
             this.viewToolStripMenuItem.Text = "Operations";
             this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
+            // 
+            // newEmployeeToolStripMenuItem
+            // 
+            this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
+            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.newEmployeeToolStripMenuItem.Text = "New Employee";
             // 
             // helpMenu
             // 
@@ -134,12 +147,6 @@ namespace EmployeesDIR
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // newEmployeeToolStripMenuItem
-            // 
-            this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
-            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newEmployeeToolStripMenuItem.Text = "New Employee";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(126, 333);
@@ -149,13 +156,6 @@ namespace EmployeesDIR
             this.button1.Text = "Choose";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // EmployeesDIR
             // 

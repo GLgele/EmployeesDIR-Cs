@@ -44,14 +44,14 @@ namespace EmployeesDIR
     class General
     {
         [DllImport("kernel32")]
-        private static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
+        protected static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
         [DllImport("kernel32")]
-        private static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
+        protected static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
         public static readonly string title = "EmployeesDIR - 3.0";
         public static readonly Mylog.Mylog logger = new Mylog.Mylog() /*LogManager.GetLogger(typeof(Program))*/;
         public static string iniFilePath = "settings.ini";
         public static List<Employee> employees = new List<Employee>();
-        General()
+        internal General()
         {
 
         }
@@ -160,7 +160,7 @@ namespace EmployeesDIR
         /// <param name="field">项⽬名称(如 [TypeName] )</param> 
         /// <param name="Key">键</param> 
         /// <param name="Value">值</param> 
-        public static void GetValueOfKey(string iniFilePath, string field, string Key, string Value)
+        public static void IniWriteVaule(string iniFilePath, string field, string Key, string Value)
         {
             WritePrivateProfileString(field, Key, Value, iniFilePath);
         }
