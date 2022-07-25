@@ -29,6 +29,7 @@ namespace EmployeesDIR
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ErrorForm));
             this.infoLabel = new System.Windows.Forms.Label();
             this.errorLabel = new System.Windows.Forms.Label();
             this.OKbutton = new System.Windows.Forms.Button();
@@ -38,66 +39,47 @@ namespace EmployeesDIR
             // 
             // infoLabel
             // 
-            this.infoLabel.AutoSize = true;
-            this.infoLabel.Location = new System.Drawing.Point(8, 8);
+            resources.ApplyResources(this.infoLabel, "infoLabel");
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(247, 15);
-            this.infoLabel.TabIndex = 0;
-            this.infoLabel.Text = "Our program run into an error:";
             this.infoLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // errorLabel
             // 
-            this.errorLabel.AutoSize = true;
-            this.errorLabel.Location = new System.Drawing.Point(8, 32);
+            resources.ApplyResources(this.errorLabel, "errorLabel");
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(47, 15);
-            this.errorLabel.TabIndex = 1;
-            this.errorLabel.Text = "Error";
             this.errorLabel.Click += new System.EventHandler(this.errorLabel_Click);
             // 
             // OKbutton
             // 
-            this.OKbutton.Location = new System.Drawing.Point(12, 456);
+            resources.ApplyResources(this.OKbutton, "OKbutton");
             this.OKbutton.Name = "OKbutton";
-            this.OKbutton.Size = new System.Drawing.Size(75, 45);
-            this.OKbutton.TabIndex = 2;
-            this.OKbutton.Text = "OK";
             this.OKbutton.UseVisualStyleBackColor = true;
             this.OKbutton.Click += new System.EventHandler(this.button1_Click);
             // 
             // copyButton
             // 
-            this.copyButton.Location = new System.Drawing.Point(175, 456);
+            resources.ApplyResources(this.copyButton, "copyButton");
             this.copyButton.Name = "copyButton";
-            this.copyButton.Size = new System.Drawing.Size(78, 45);
-            this.copyButton.TabIndex = 3;
-            this.copyButton.Text = "Copy";
             this.copyButton.UseVisualStyleBackColor = true;
             this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
             // viewLogButton
             // 
-            this.viewLogButton.Location = new System.Drawing.Point(93, 456);
+            resources.ApplyResources(this.viewLogButton, "viewLogButton");
             this.viewLogButton.Name = "viewLogButton";
-            this.viewLogButton.Size = new System.Drawing.Size(76, 45);
-            this.viewLogButton.TabIndex = 4;
-            this.viewLogButton.Text = "View log";
             this.viewLogButton.UseVisualStyleBackColor = true;
             this.viewLogButton.Click += new System.EventHandler(this.viewLogButton_Click);
             // 
             // ErrorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 513);
             this.Controls.Add(this.viewLogButton);
             this.Controls.Add(this.copyButton);
             this.Controls.Add(this.OKbutton);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.infoLabel);
             this.Name = "ErrorForm";
-            this.Text = "Error";
             this.Load += new System.EventHandler(this.ErrorForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

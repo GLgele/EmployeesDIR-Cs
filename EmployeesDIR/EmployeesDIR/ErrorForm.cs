@@ -15,6 +15,7 @@ namespace EmployeesDIR
     public partial class ErrorForm : Form
     {
         private string errmsg = "";
+        private General.Language CurrentSelectedLanguage = General.Language.ChineseSimplified;
         public ErrorForm()
         {
             InitializeComponent();
@@ -67,6 +68,16 @@ namespace EmployeesDIR
             if (errmsg != "")
             {
                 errorLabel.Text = errmsg;
+            }
+            string language = Properties.Settings.Default.Language;
+            MultiLanguage.SetDefaultLanguage(language);
+            MultiLanguage.LoadLanguage(this, typeof(ErrorForm));
+            switch (language.ToLower())
+            {
+                case "zh-cn": this.CurrentSelectedLanguage = General.Language.ChineseSimplified; break;
+                case "en-us": this.CurrentSelectedLanguage = General.Language.English; break;
+                default:
+                    break;
             }
         }
 
