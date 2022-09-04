@@ -80,8 +80,12 @@ namespace EmployeesDIR
             General.logger.InfoFormat("Root winform loading. Event{0}",e.ToString());
 #if DEBUG
             testToolStripMenuItem.Enabled = true;
+            debugToolStripMenuItem.Enabled = true;
+            errorFormToolStripMenuItem.Enabled = true;
 #else
             testToolStripMenuItem.Enabled = false;
+            debugToolStripMenuItem.Enabled = false;
+            errorFormToolStripMenuItem.Enabled = false;
 #endif
             Flush_Window();
         }
@@ -134,6 +138,17 @@ namespace EmployeesDIR
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void debugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void errorFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ErrorForm errorForm = new ErrorForm("err");
+            errorForm.Show();
         }
     }
 }

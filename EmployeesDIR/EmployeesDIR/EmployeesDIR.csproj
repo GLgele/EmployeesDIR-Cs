@@ -56,7 +56,7 @@
     </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>17ED5E74897DCC1B00A99392DC8DE11657A77DFA</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1DFA7FB3BC98FBADFB56A5DBBF0D8F2C400A29DB</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>EmployeesDIR_TemporaryKey.pfx</ManifestKeyFile>
@@ -208,4 +208,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>copy $(SolutionDir)\lang\* $(SolutionDir)$(OutDir)\lang</PreBuildEvent>
+  </PropertyGroup>
 </Project>

@@ -63,7 +63,8 @@ namespace EmployeesDIR
         private void ErrorForm_Load(object sender, EventArgs e)
         {
             General.logger.DebugFormat("Error Form loaded.Args: {0}",errmsg);
-            if(errmsg != "")
+            General.trans.Init(this);
+            if (errmsg != "")
             {
                 errorLabel.Text = errmsg;
             }

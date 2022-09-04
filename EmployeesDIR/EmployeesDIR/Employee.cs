@@ -51,6 +51,7 @@ namespace EmployeesDIR
         public static readonly Mylog.Mylog logger = new Mylog.Mylog() /*LogManager.GetLogger(typeof(Program))*/;
         public static string iniFilePath = "settings.ini";
         public static List<Employee> employees = new List<Employee>();
+        public static trans trans = new trans();
         internal General()
         {
 

@@ -4,16 +4,16 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 using Newtonsoft.Json;
 
 namespace EmployeesDIR
 {
-    [Obsolete]
-    /// <summary>
+    //[Obsolete]
+    /// </summary>
     /// 不再使用 改为winform多语言
     /// </summary>
-    class trans:General
+    class trans : General
     {
         private static string lang;
         private string source;
@@ -23,44 +23,40 @@ namespace EmployeesDIR
         {
             try
             {
-                file = new StreamReader(new FileStream(lang + ".json", FileMode.Open, FileAccess.Read, FileShare.Read));
+                file = new StreamReader(new FileStream("lang/" + lang + ".json", FileMode.Open, FileAccess.Read, FileShare.Read));
             }
-            catch(IOException)
+            catch (IOException)
             {
-                file = new StreamReader(new FileStream("en_us.json", FileMode.Open, FileAccess.Read, FileShare.Read));
+                file = new StreamReader(new FileStream("lang/en_us.json", FileMode.Open, FileAccess.Read, FileShare.Read));
             }
-            catch(Exception)
+            catch (Exception)
             {
                 General.logger.Fatal("Can't load language file!");
                 ErrorForm form = new ErrorForm("Can't load language file!");
             }
             lang = IniReadValue(iniFilePath, "lang", "lang");
-            file.ReadToEnd();
+            source = file.ReadToEnd();
             file.Close();
-            source = file.ToString();
+            source = source.Replace("\r", "").Replace("\n", "").Replace("\t", "");
+            //source = file.ToString();
             JsonTextReader reader = new JsonTextReader(new StringReader(source));
             string tmp1 = "";
             string tmp2 = "";
-            int cnt = 0;
             while (reader.Read())
             {
                 if (reader.Value != null)
                 {
                     //Console.WriteLine("Token: {0}, Value: {1}", reader.TokenType, reader.Value);
-                    if(reader.TokenType == JsonToken.String)
+                    if (reader.TokenType == JsonToken.PropertyName)
                     {
-                        cnt++;
-                        if(cnt % 2 == 1)
-                        {
-                            tmp1 = reader.Value.ToString();
-                        }
-                        else
-                        {
-                            tmp2 = reader.Value.ToString();
-                            dict[tmp1] = tmp2;
-                            tmp1 = "";
-                            tmp2 = "";
-                        }
+                        tmp1 = reader.Value.ToString();
+                    }
+                    else if (reader.TokenType == JsonToken.String)
+                    {
+                        tmp2 = reader.Value.ToString();
+                        dict[tmp1] = tmp2;
+                        tmp1 = "";
+                        tmp2 = "";
                     }
                 }
                 else
@@ -75,7 +71,28 @@ namespace EmployeesDIR
         }
         public string tr(string s)
         {
-            return dict[s];
+            try
+            {
+                return dict[s];
+            }
+            catch (Exception)
+            {
+                return s;
+            }
+        }
+        public void Init(Form form)
+        {
+            foreach (Control control in form.Controls)
+            {
+                try
+                {
+                    control.Text = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
+                }
+                catch (Exception)
+                {
+                    //Actually we do nothing if we catch an exception.
+                }
+            }
         }
     }
 }
