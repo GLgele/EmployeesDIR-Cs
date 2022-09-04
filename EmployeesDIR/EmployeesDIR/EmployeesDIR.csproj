@@ -177,6 +177,7 @@
     <None Include=".editorconfig" />
     <None Include="EmployeesDIR_TemporaryKey.pfx" />
     <None Include="lang\en_us.json" />
+    <None Include="lang\zh_cn.json" />
     <None Include="log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

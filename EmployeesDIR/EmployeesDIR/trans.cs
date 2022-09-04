@@ -28,6 +28,7 @@ namespace EmployeesDIR
             catch (IOException)
             {
                 file = new StreamReader(new FileStream("lang/en_us.json", FileMode.Open, FileAccess.Read, FileShare.Read));
+                General.logger.Error("Can't find settings.ini!");
             }
             catch (Exception)
             {
@@ -77,6 +78,7 @@ namespace EmployeesDIR
             }
             catch (Exception)
             {
+                General.logger.WarnFormat("Translate string not found! Source:({0})", s);
                 return s;
             }
         }

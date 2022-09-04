@@ -1,5 +1,9 @@
 {
   "title": "EmployeesDIR - 3.0",
   "EmployeesDIR - 3.0": "EmployeesDIR - 3.0",
-  "ErrorForm.viewLogButton": "View Log"
+  "ErrorForm.viewLogButton": "View Log",
+  "ErrorForm.copyButton": "Copy",
+  "ErrorForm.OKbutton": "OK",
+  "ErrorForm.errorLabel": "Error",
+  "ErrorForm.infoLabel": "Our program run into an error:"
 }
