@@ -49,7 +49,8 @@ namespace EmployeesDIR
         protected static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
         public static readonly string title = "EmployeesDIR - 3.0";
         public static readonly Mylog.Mylog logger = new Mylog.Mylog() /*LogManager.GetLogger(typeof(Program))*/;
-        public static string iniFilePath = "settings.ini";
+        public static string iniFilePath = "config.ini";
+        public static AppConfig Config = AppConfig.Get();
         public static List<Employee> employees = new List<Employee>();
         public static trans trans = new trans();
         internal General()

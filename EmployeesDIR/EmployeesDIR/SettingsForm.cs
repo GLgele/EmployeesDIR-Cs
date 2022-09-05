@@ -21,8 +21,8 @@ namespace EmployeesDIR
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             General.logger.Debug("New Settings Form.");
-            languageComboBox.SelectedItem = trans.langDict2[IniHelper.Read("Language", "lang", "en_us", General.iniFilePath)];
-            downloadComboBox.SelectedItem = IniHelper.Read("Update", "source", "Github", General.iniFilePath);
+            languageComboBox.SelectedItem = trans.langDict2[General.Config.Language.lang];
+            downloadComboBox.SelectedItem = General.Config.Update.source;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -68,8 +68,16 @@ namespace EmployeesDIR
             //General.IniWriteVaule(General.iniFilePath, "Language", "lang", languageComboBox.SelectedText);
             //General.IniWriteVaule(General.iniFilePath, "Update", "source", downloadComboBox.SelectedText);
             //Console.WriteLine(languageComboBox.SelectedText);
-            IniHelper.Write("Language", "lang", trans.langDict[languageComboBox.SelectedItem.ToString()], General.iniFilePath);
-            IniHelper.Write("Update", "source", downloadComboBox.SelectedItem.ToString(),General.iniFilePath);
+            //IniHelper.Write("Language", "lang", trans.langDict[languageComboBox.SelectedItem.ToString()], General.iniFilePath);
+            //IniHelper.Write("Update", "source", downloadComboBox.SelectedItem.ToString(),General.iniFilePath);
+            StreamWriter sw = new StreamWriter("config.ini");
+            sw.WriteLine("[Language]");
+            sw.Write("lang=");
+            sw.WriteLine(trans.langDict[languageComboBox.SelectedItem.ToString()]);
+            sw.WriteLine("[Update]");
+            sw.Write("source=");
+            sw.WriteLine(downloadComboBox.SelectedItem.ToString());
+            sw.Close();
             cancelButton_Click(sender, e);
         }
 

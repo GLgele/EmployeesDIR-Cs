@@ -22,8 +22,8 @@ namespace EmployeesDIR
         private StreamReader file;
         private Dictionary<string, string> dict = new Dictionary<string, string>();
         public trans()
-        {   
-            lang = IniHelper.Read("Language", "lang", "en_us", iniFilePath);
+        {
+            lang = Config.Language.lang;
             //lang = langDict[lang];
             logger.DebugFormat("Language:{0}", langDict2[lang]);
             try
