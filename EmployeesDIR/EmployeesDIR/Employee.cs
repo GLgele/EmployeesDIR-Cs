@@ -154,6 +154,7 @@ namespace EmployeesDIR
                 error.Show();
             }
         }
+        /*
         /// <summary> 
         /// 写⼊INI⽂件
         /// </summary> 
@@ -177,6 +178,7 @@ namespace EmployeesDIR
             int i = GetPrivateProfileString(field, Key, "", temp, 500, iniPath);
             return temp.ToString();
         }
+        */
         public static void AppendEmployee(/*int id, */string name, string sex, string number, string comment, string email, string edu, string salary)
         {
             int id = 0;

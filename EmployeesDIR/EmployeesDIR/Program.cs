@@ -25,6 +25,7 @@ namespace EmployeesDIR
         static void Main()
         {
             General.logger.Info("Entering application.");
+
 #if DEBUG
             //AllocConsole();
             //Application.SetHighDpiMode(HighDpiMode.SystemAware);

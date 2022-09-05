@@ -137,7 +137,8 @@ namespace EmployeesDIR
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.Show();
         }
 
         private void debugToolStripMenuItem_Click(object sender, EventArgs e)
@@ -149,6 +150,11 @@ namespace EmployeesDIR
         {
             ErrorForm errorForm = new ErrorForm("err");
             errorForm.Show();
+        }
+
+        private void testToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            testToolStripMenuItem_Click(sender,e);
         }
     }
 }

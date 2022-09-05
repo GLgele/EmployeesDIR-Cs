@@ -15,12 +15,17 @@ namespace EmployeesDIR
     /// </summary>
     class trans : General
     {
+        public static readonly Dictionary<string, string> langDict = new Dictionary<string, string>() {{"中文（简体）","zh_cn"},{"English","en_us"} };
+        public static readonly Dictionary<string, string> langDict2 = langDict.ToDictionary(k => k.Value, p => p.Key);
         private static string lang;
         private string source;
         private StreamReader file;
         private Dictionary<string, string> dict = new Dictionary<string, string>();
         public trans()
-        {
+        {   
+            lang = IniHelper.Read("Language", "lang", "en_us", iniFilePath);
+            //lang = langDict[lang];
+            logger.DebugFormat("Language:{0}", langDict2[lang]);
             try
             {
                 file = new StreamReader(new FileStream("lang/" + lang + ".json", FileMode.Open, FileAccess.Read, FileShare.Read));
@@ -35,7 +40,6 @@ namespace EmployeesDIR
                 General.logger.Fatal("Can't load language file!");
                 ErrorForm form = new ErrorForm("Can't load language file!");
             }
-            lang = IniReadValue(iniFilePath, "lang", "lang");
             source = file.ReadToEnd();
             file.Close();
             source = source.Replace("\r", "").Replace("\n", "").Replace("\t", "");
@@ -79,7 +83,7 @@ namespace EmployeesDIR
             catch (Exception)
             {
                 General.logger.WarnFormat("Translate string not found! Source:({0})", s);
-                return s;
+                return "";
             }
         }
         public void Init(Form form)
@@ -88,7 +92,11 @@ namespace EmployeesDIR
             {
                 try
                 {
-                    control.Text = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
+                    string tmp = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
+                    if(tmp != "")
+                    {
+                        control.Text = tmp;
+                    }
                 }
                 catch (Exception)
                 {
