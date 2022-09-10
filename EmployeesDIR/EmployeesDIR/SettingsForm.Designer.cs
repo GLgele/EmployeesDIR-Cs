@@ -53,9 +53,9 @@ namespace EmployeesDIR
             // 
             // checkUpdateButton
             // 
-            this.checkUpdateButton.Location = new System.Drawing.Point(333, 31);
+            this.checkUpdateButton.Location = new System.Drawing.Point(340, 31);
             this.checkUpdateButton.Name = "checkUpdateButton";
-            this.checkUpdateButton.Size = new System.Drawing.Size(100, 23);
+            this.checkUpdateButton.Size = new System.Drawing.Size(100, 28);
             this.checkUpdateButton.TabIndex = 1;
             this.checkUpdateButton.Text = "Check Now";
             this.checkUpdateButton.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@ namespace EmployeesDIR
             this.checkUpdateBox.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.checkUpdateBox.Location = new System.Drawing.Point(16, 31);
             this.checkUpdateBox.Name = "checkUpdateBox";
-            this.checkUpdateBox.Size = new System.Drawing.Size(291, 23);
+            this.checkUpdateBox.Size = new System.Drawing.Size(301, 23);
             this.checkUpdateBox.TabIndex = 3;
-            this.checkUpdateBox.Text = "Check updates when started";
+            this.checkUpdateBox.Text = "Check updates when starting";
             this.checkUpdateBox.UseVisualStyleBackColor = true;
             this.checkUpdateBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 

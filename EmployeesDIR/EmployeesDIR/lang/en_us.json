@@ -7,5 +7,14 @@
   "ErrorForm.copyButton": "Copy",
   "ErrorForm.OKbutton": "OK",
   "ErrorForm.errorLabel": "Error",
-  "ErrorForm.infoLabel": "Our program run into an error:"
+  "ErrorForm.infoLabel": "Our program run into an error:",
+  "SettingsForm.languageLabel": "Language",
+  "SettingsForm.cancelButton": "Cancel",
+  "SettingsForm.OKButton": "OK",
+  "SettingsForm.sourceLabel": "Download Source",
+  "SettingsForm.checkUpdateButton": "Check Now",
+  "SettingsForm.updateLabel": "Update",
+  "SettingsForm.checkUpdateBox": "Check updates when starting",
+  "SettingsForm.languageComboBox": "",
+  "SettingsForm.downloadComboBox": ""
 }

@@ -7,5 +7,14 @@
 	"ErrorForm.copyButton": "复制\n消息",
 	"ErrorForm.OKbutton": "确认",
 	"ErrorForm.errorLabel": "错误",
-	"ErrorForm.infoLabel": "我们的程序出现了一些错误:"
+	"ErrorForm.infoLabel": "我们的程序出现了一些错误:",
+	"SettingsForm.languageLabel": "语言",
+	"SettingsForm.cancelButton": "取消",
+	"SettingsForm.OKButton": "确认",
+	"SettingsForm.sourceLabel": "下载源",
+	"SettingsForm.checkUpdateButton": "立即检查",
+	"SettingsForm.updateLabel": "更新",
+	"SettingsForm.checkUpdateBox": "启动时检查更新",
+	"SettingsForm.languageComboBox": "",
+	"SettingsForm.downloadComboBox": ""
 }

@@ -21,6 +21,12 @@ namespace EmployeesDIR
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             General.logger.Debug("New Settings Form.");
+            General.trans.Init(this);
+            if(General.Config.Language.lang == "zh_cn")
+            {
+                //checkUpdateButton.Location.X = 186;
+                checkUpdateButton.Location = new Point(176, 23);
+            }
             languageComboBox.SelectedItem = trans.langDict2[General.Config.Language.lang];
             downloadComboBox.SelectedItem = General.Config.Update.source;
         }
