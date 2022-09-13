@@ -16,5 +16,17 @@
   "SettingsForm.updateLabel": "Update",
   "SettingsForm.checkUpdateBox": "Check updates when starting",
   "SettingsForm.languageComboBox": "",
-  "SettingsForm.downloadComboBox": ""
+  "SettingsForm.downloadComboBox": "",
+  "EmployeesDIR.listBox1": "",
+  "EmployeesDIR.chooseButton": "Choose",
+  "EmployeesDIR.menuStrip": "",
+  "EmployeesDIR.fileMenu": "File",
+  "EmployeesDIR.viewToolStripMenuItem": "View",
+  "EmployeesDIR.helpMenu": "Help",
+  "EmployeesDIR.saveItem": "Save",
+  "EmployeesDIR.openItem": "Open",
+  "EmployeesDIR.settingsItem": "Settings",
+  "EmployeesDIR.exitItem": "Exit",
+  "EmployeesDIR.newEmployeeToolStripMenuItem": "New Employee",
+  "EmployeesDIR.aboutItem": "About"
 }

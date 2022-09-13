@@ -16,5 +16,17 @@
 	"SettingsForm.updateLabel": "更新",
 	"SettingsForm.checkUpdateBox": "启动时检查更新",
 	"SettingsForm.languageComboBox": "",
-	"SettingsForm.downloadComboBox": ""
+	"SettingsForm.downloadComboBox": "",
+	"EmployeesDIR.listBox1": "",
+	"EmployeesDIR.chooseButton": "选择",
+	"EmployeesDIR.menuStrip": "",
+	"EmployeesDIR.fileMenu": "文件",
+	"EmployeesDIR.viewToolStripMenuItem": "查看",
+	"EmployeesDIR.helpMenu": "帮助",
+	"EmployeesDIR.saveItem": "保存",
+	"EmployeesDIR.openItem": "打开",
+	"EmployeesDIR.settingsItem": "设置",
+	"EmployeesDIR.exitItem": "退出",
+	"EmployeesDIR.newEmployeeToolStripMenuItem": "新员工",
+	"EmployeesDIR.aboutItem": "关于"
 }

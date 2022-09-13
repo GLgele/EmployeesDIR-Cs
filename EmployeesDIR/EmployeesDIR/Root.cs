@@ -16,15 +16,22 @@ namespace EmployeesDIR
         public EmployeesDIR()
         {
             InitializeComponent();
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(Form_Closing);
+            this.FormClosing += new FormClosingEventHandler(Form_Closing);
         }
 
         private void Flush_Window()
         {
+            listBox1.Items.Clear();
             foreach (Employee emp in General.employees)
             {
                 listBox1.Items.Add(emp.GetInfo()[0]);
             }
+            General.trans.Init(this);
+        }
+
+        public void Flush_Window(object sender, EventArgs e)
+        {
+            this.Flush_Window();
         }
 
         private void Form_Closing(object sender, FormClosingEventArgs e)
@@ -79,9 +86,9 @@ namespace EmployeesDIR
         {
             General.logger.InfoFormat("Root winform loading. Event{0}",e.ToString());
 #if DEBUG
-            testToolStripMenuItem.Enabled = true;
+            testDebugToolStripMenuItem.Enabled = true;
             debugToolStripMenuItem.Enabled = true;
-            errorFormToolStripMenuItem.Enabled = true;
+            errorFormDebugToolStripMenuItem.Enabled = true;
 #else
             testToolStripMenuItem.Enabled = false;
             debugToolStripMenuItem.Enabled = false;
@@ -138,6 +145,7 @@ namespace EmployeesDIR
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SettingsForm settingsForm = new SettingsForm();
+            settingsForm.FormClosed += Flush_Window;
             settingsForm.Show();
         }
 
@@ -155,6 +163,11 @@ namespace EmployeesDIR
         private void testToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             testToolStripMenuItem_Click(sender,e);
+        }
+
+        private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

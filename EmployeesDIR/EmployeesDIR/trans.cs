@@ -15,7 +15,7 @@ namespace EmployeesDIR
     /// </summary>
     class trans : General
     {
-        public static readonly Dictionary<string, string> langDict = new Dictionary<string, string>() {{"中文（简体）","zh_cn"},{"English","en_us"} };
+        public static readonly Dictionary<string, string> langDict = new Dictionary<string, string>() { { "中文（简体）", "zh_cn" }, { "English", "en_us" } };
         public static readonly Dictionary<string, string> langDict2 = langDict.ToDictionary(k => k.Value, p => p.Key);
         private static string lang;
         private string source;
@@ -76,31 +76,47 @@ namespace EmployeesDIR
         }
         public string tr(string s)
         {
-            try
+            if (!(s.ToLower().Contains("debug")))
             {
-                return dict[s];
+                try
+                {
+                    return dict[s];
+                }
+                catch (Exception)
+                {
+                    General.logger.WarnFormat("Translate string not found! Source:({0})", s);
+                    return "";
+                }
             }
-            catch (Exception)
-            {
-                General.logger.WarnFormat("Translate string not found! Source:({0})", s);
-                return "";
-            }
+            return "";
         }
         public void Init(Form form)
         {
             foreach (Control control in form.Controls)
             {
-                try
+                string tmp = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
+                if (tmp != "")
                 {
-                    string tmp = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
-                    if(tmp != "")
-                    {
-                        control.Text = tmp;
-                    }
+                    control.Text = tmp;
                 }
-                catch (Exception)
+            }
+            if (form is EmployeesDIR)
+            {
+                foreach (ToolStripMenuItem menuItem in form.MainMenuStrip.Items)
                 {
-                    //Actually we do nothing if we catch an exception.
+                    foreach (ToolStripItem item in menuItem.DropDownItems)
+                    {
+                        string tmps = tr("Form.Item".Replace("Form", form.Name).Replace("Item", item.Name));
+                        if (tmps != "")
+                        {
+                            item.Text = tmps;
+                        }
+                    }
+                    string tmp = tr("Form.Item".Replace("Form", form.Name).Replace("Item", menuItem.Name));
+                    if (tmp != "")
+                    {
+                        menuItem.Text = tmp;
+                    }
                 }
             }
         }

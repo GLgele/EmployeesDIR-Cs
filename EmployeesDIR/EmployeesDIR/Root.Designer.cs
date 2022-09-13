@@ -33,17 +33,17 @@ namespace EmployeesDIR
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.saveItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.errorFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorFormDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.chooseButton = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +67,7 @@ namespace EmployeesDIR
             this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveItem,
             this.openItem,
-            this.settingsToolStripMenuItem,
+            this.settingsItem,
             this.exitItem});
             this.fileMenu.Name = "fileMenu";
             this.fileMenu.Size = new System.Drawing.Size(48, 24);
@@ -76,28 +76,28 @@ namespace EmployeesDIR
             // saveItem
             // 
             this.saveItem.Name = "saveItem";
-            this.saveItem.Size = new System.Drawing.Size(152, 26);
+            this.saveItem.Size = new System.Drawing.Size(224, 26);
             this.saveItem.Text = "Save";
             this.saveItem.Click += new System.EventHandler(this.saveItem_Click);
             // 
             // openItem
             // 
             this.openItem.Name = "openItem";
-            this.openItem.Size = new System.Drawing.Size(152, 26);
+            this.openItem.Size = new System.Drawing.Size(224, 26);
             this.openItem.Text = "Open";
             this.openItem.Click += new System.EventHandler(this.openItem_Click);
             // 
-            // settingsToolStripMenuItem
+            // settingsItem
             // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            this.settingsItem.Name = "settingsItem";
+            this.settingsItem.Size = new System.Drawing.Size(224, 26);
+            this.settingsItem.Text = "Settings";
+            this.settingsItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // exitItem
             // 
             this.exitItem.Name = "exitItem";
-            this.exitItem.Size = new System.Drawing.Size(152, 26);
+            this.exitItem.Size = new System.Drawing.Size(224, 26);
             this.exitItem.Text = "Exit";
             this.exitItem.Click += new System.EventHandler(this.exitItem_Click);
             // 
@@ -113,8 +113,9 @@ namespace EmployeesDIR
             // newEmployeeToolStripMenuItem
             // 
             this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
-            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.newEmployeeToolStripMenuItem.Text = "New Employee";
+            this.newEmployeeToolStripMenuItem.Click += new System.EventHandler(this.newEmployeeToolStripMenuItem_Click);
             // 
             // helpMenu
             // 
@@ -132,58 +133,58 @@ namespace EmployeesDIR
             this.aboutItem.Text = "About";
             this.aboutItem.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(13, 47);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(159, 364);
-            this.listBox1.TabIndex = 1;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(180, 382);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Choose";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // debugToolStripMenuItem
             // 
             this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testToolStripMenuItem,
-            this.errorFormToolStripMenuItem});
+            this.testDebugToolStripMenuItem,
+            this.errorFormDebugToolStripMenuItem});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
             this.debugToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.debugToolStripMenuItem.Text = "Debug";
             this.debugToolStripMenuItem.Click += new System.EventHandler(this.debugToolStripMenuItem_Click);
             // 
-            // testToolStripMenuItem
+            // testDebugToolStripMenuItem
             // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.testToolStripMenuItem.Text = "Test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click_1);
+            this.testDebugToolStripMenuItem.Name = "testDebugToolStripMenuItem";
+            this.testDebugToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.testDebugToolStripMenuItem.Text = "Test";
+            this.testDebugToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click_1);
             // 
-            // errorFormToolStripMenuItem
+            // errorFormDebugToolStripMenuItem
             // 
-            this.errorFormToolStripMenuItem.Name = "errorFormToolStripMenuItem";
-            this.errorFormToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.errorFormToolStripMenuItem.Text = "ErrorForm";
-            this.errorFormToolStripMenuItem.Click += new System.EventHandler(this.errorFormToolStripMenuItem_Click);
+            this.errorFormDebugToolStripMenuItem.Name = "errorFormDebugToolStripMenuItem";
+            this.errorFormDebugToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.errorFormDebugToolStripMenuItem.Text = "ErrorForm";
+            this.errorFormDebugToolStripMenuItem.Click += new System.EventHandler(this.errorFormToolStripMenuItem_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(13, 47);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(159, 364);
+            this.listBox1.TabIndex = 1;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // chooseButton
+            // 
+            this.chooseButton.Location = new System.Drawing.Point(180, 382);
+            this.chooseButton.Margin = new System.Windows.Forms.Padding(4);
+            this.chooseButton.Name = "chooseButton";
+            this.chooseButton.Size = new System.Drawing.Size(100, 29);
+            this.chooseButton.TabIndex = 2;
+            this.chooseButton.Text = "Choose";
+            this.chooseButton.UseVisualStyleBackColor = true;
+            this.chooseButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // EmployeesDIR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 433);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.chooseButton);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
@@ -217,11 +218,11 @@ namespace EmployeesDIR
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ToolStripMenuItem newEmployeeToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.Button chooseButton;
+        private System.Windows.Forms.ToolStripMenuItem settingsItem;
         private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem errorFormToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testDebugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem errorFormDebugToolStripMenuItem;
     }
 }
 
