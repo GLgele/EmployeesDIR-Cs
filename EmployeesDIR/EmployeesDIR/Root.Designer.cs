@@ -35,7 +35,7 @@ namespace EmployeesDIR
             this.openItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +52,7 @@ namespace EmployeesDIR
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
-            this.viewToolStripMenuItem,
+            this.opsToolStripMenuItem,
             this.helpMenu,
             this.debugToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -101,14 +101,14 @@ namespace EmployeesDIR
             this.exitItem.Text = "Exit";
             this.exitItem.Click += new System.EventHandler(this.exitItem_Click);
             // 
-            // viewToolStripMenuItem
+            // opsToolStripMenuItem
             // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newEmployeeToolStripMenuItem});
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
-            this.viewToolStripMenuItem.Text = "Operations";
-            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
+            this.opsToolStripMenuItem.Name = "opsToolStripMenuItem";
+            this.opsToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.opsToolStripMenuItem.Text = "Operations";
+            this.opsToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // newEmployeeToolStripMenuItem
             // 
@@ -215,7 +215,7 @@ namespace EmployeesDIR
         private System.Windows.Forms.ToolStripMenuItem saveItem;
         private System.Windows.Forms.ToolStripMenuItem openItem;
         private System.Windows.Forms.ToolStripMenuItem exitItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opsToolStripMenuItem;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ToolStripMenuItem newEmployeeToolStripMenuItem;
         private System.Windows.Forms.Button chooseButton;

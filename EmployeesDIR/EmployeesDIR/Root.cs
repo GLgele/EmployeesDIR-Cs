@@ -75,6 +75,18 @@ namespace EmployeesDIR
             // base.OnFormClosing(e);
         }
 
+        private void ConfigReload()
+        {
+            General.Config = AppConfig.Get();
+            General.trans = new trans();
+        }
+
+        private void ConfigReload(object sender ,EventArgs e) 
+        {
+            ConfigReload();
+            Console.WriteLine(General.Config.Language.lang);
+        }
+
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("EmployeesDIR\nVersion 3.0.0\nCopyright GLgele (c) 2022",General.title);
@@ -145,6 +157,7 @@ namespace EmployeesDIR
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SettingsForm settingsForm = new SettingsForm();
+            settingsForm.FormClosed += ConfigReload;
             settingsForm.FormClosed += Flush_Window;
             settingsForm.Show();
         }

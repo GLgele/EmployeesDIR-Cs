@@ -29,7 +29,7 @@ namespace EmployeesDIR
         public AppConfig() { }
         public static AppConfig Get()
         {
-            if (Instance != null) return Instance;
+            //if (Instance != null) return Instance;
 
             Instance = new ConfigurationBuilder()
                 .AddIniFile(General.iniFilePath)
