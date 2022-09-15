@@ -111,7 +111,7 @@ namespace EmployeesDIR
 
         private void exitItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("真的要退出程序吗？", General.title, MessageBoxButtons.YesNo) == DialogResult.Yes) 
+            if (MessageBox.Show(General.trans.tr("Really want to exit?"), General.title, MessageBoxButtons.YesNo) == DialogResult.Yes) 
             {
                 Application.Exit();
             }

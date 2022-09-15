@@ -85,6 +85,7 @@ namespace EmployeesDIR
                 catch (Exception)
                 {
                     General.logger.WarnFormat("Translate string not found! Source:({0})", s);
+                    if (!s.Contains(".")) return s;
                     return "";
                 }
             }
