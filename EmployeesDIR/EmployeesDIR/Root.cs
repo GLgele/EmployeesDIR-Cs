@@ -98,13 +98,13 @@ namespace EmployeesDIR
         {
             General.logger.InfoFormat("Root winform loading. Event{0}",e.ToString());
 #if DEBUG
-            testDebugToolStripMenuItem.Enabled = true;
-            debugToolStripMenuItem.Enabled = true;
-            errorFormDebugToolStripMenuItem.Enabled = true;
+            testDebugToolStripMenuItem.Available = true;
+            debugToolStripMenuItem.Available = true;
+            errorFormDebugToolStripMenuItem.Available = true;
 #else
-            testToolStripMenuItem.Enabled = false;
-            debugToolStripMenuItem.Enabled = false;
-            errorFormToolStripMenuItem.Enabled = false;
+            testDebugToolStripMenuItem.Available = false;
+            debugToolStripMenuItem.Available = false;
+            errorFormDebugToolStripMenuItem.Available = false;
 #endif
             Flush_Window();
         }
