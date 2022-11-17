@@ -13,10 +13,18 @@ namespace EmployeesDIR
 {
     public partial class EmployeesDIR : Form
     {
+        private string stat = "";
         public EmployeesDIR()
         {
             InitializeComponent();
             this.FormClosing += new FormClosingEventHandler(Form_Closing);
+            nameLabel.Text = "";
+            sexLabel.Text = "";
+            numberLabel.Text = "";
+            commentLabel.Text = "";
+            emailLabel.Text = "";
+            eduLabel.Text = "";
+            salaryLabel.Text = "";
         }
 
         private void Flush_Window()
@@ -27,6 +35,13 @@ namespace EmployeesDIR
                 listBox1.Items.Add(emp.GetInfo()[0]);
             }
             General.trans.Init(this);
+            nameLabel.Text = "";
+            sexLabel.Text = "";
+            numberLabel.Text = "";
+            commentLabel.Text = "";
+            emailLabel.Text = "";
+            eduLabel.Text = "";
+            salaryLabel.Text = "";
         }
 
         public void Flush_Window(object sender, EventArgs e)
@@ -89,7 +104,7 @@ namespace EmployeesDIR
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("EmployeesDIR\nVersion 3.0.0\nCopyright GLgele (c) 2022",General.title);
+            MessageBox.Show("EmployeesDIR\nVersion 3.0.1\nCopyright GLgele (c) 2022",General.title);
             //Form errorform = new ErrorForm("aaa");
             //errorform.Show();
         }
@@ -107,6 +122,15 @@ namespace EmployeesDIR
             errorFormDebugToolStripMenuItem.Available = false;
 #endif
             Flush_Window();
+            textBox1.Hide();
+            textBox2.Hide();
+            textBox3.Hide();
+            textBox4.Hide();
+            textBox5.Hide();
+            textBox6.Hide();
+            textBox7.Hide();
+            confirmButton.Hide();
+            editButton.Focus();
         }
 
         private void exitItem_Click(object sender, EventArgs e)
@@ -136,12 +160,22 @@ namespace EmployeesDIR
 
         private void helpMenu_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (listBox1.SelectedIndex != -1)
+            {
+                nameLabel.Text = General.trans.tr("name")+": "+General.employees[listBox1.SelectedIndex].GetInfo()[0];
+                sexLabel.Text = General.trans.tr("sex") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[1];
+                numberLabel.Text = General.trans.tr("number") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[2];
+                commentLabel.Text = General.trans.tr("comment") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[3];
+                emailLabel.Text = General.trans.tr("email") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[4];
+                eduLabel.Text = General.trans.tr("edu") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[5];
+                salaryLabel.Text = General.trans.tr("salary") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[6];
+            }
+            editButton.Focus();
         }
 
         private void viewToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,7 +185,36 @@ namespace EmployeesDIR
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if(listBox1.SelectedIndex != -1)
+            {
+                textBox1.Show();
+                textBox2.Show();
+                textBox3.Show();
+                textBox4.Show();
+                textBox5.Show();
+                textBox6.Show();
+                textBox7.Show();
+                confirmButton.Show();
+                editButton.Hide();
+                deleteButton.Hide();
+                newEButton.Hide();
+                nameLabel.Text = General.trans.tr("name");
+                sexLabel.Text = General.trans.tr("sex");
+                numberLabel.Text = General.trans.tr("number");
+                commentLabel.Text = General.trans.tr("comment");
+                emailLabel.Text = General.trans.tr("email");
+                eduLabel.Text = General.trans.tr("edu");
+                salaryLabel.Text = General.trans.tr("salary");
+                textBox1.Text = General.employees[listBox1.SelectedIndex].GetInfo()[0];
+                textBox2.Text = General.employees[listBox1.SelectedIndex].GetInfo()[1];
+                textBox3.Text = General.employees[listBox1.SelectedIndex].GetInfo()[2];
+                textBox4.Text = General.employees[listBox1.SelectedIndex].GetInfo()[3];
+                textBox5.Text = General.employees[listBox1.SelectedIndex].GetInfo()[4];
+                textBox6.Text = General.employees[listBox1.SelectedIndex].GetInfo()[5];
+                textBox7.Text = General.employees[listBox1.SelectedIndex].GetInfo()[6];
+            }
+            stat = "edit";
+            confirmButton.Focus();
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -180,7 +243,82 @@ namespace EmployeesDIR
 
         private void newEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            NewEButton_Click(sender, e);
+        }
 
+        private void confirmButton_Click(object sender, EventArgs e)
+        {
+            List<string> tmp = new List<string> { textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, };
+            switch (stat)
+            {
+                case "edit":
+                    {
+                        General.employees[listBox1.SelectedIndex].ChangeInfo(tmp);
+                        break;
+                    }
+                case "new":
+                    {
+                        if(tmp[0]!="") General.AppendEmployee(tmp);
+                        break;
+                    }
+            }
+            
+            textBox1.Hide();
+            textBox2.Hide();
+            textBox3.Hide();
+            textBox4.Hide();
+            textBox5.Hide();
+            textBox6.Hide();
+            textBox7.Hide();
+            confirmButton.Hide();
+            editButton.Show();
+            deleteButton.Show();
+            newEButton.Show();
+            listBox1_SelectedIndexChanged(sender, e);
+            Flush_Window();
+            editButton.Focus();
+        }
+
+        private void editInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button1_Click(sender, e);
+        }
+
+        private void deleteEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            deleteButton_Click(sender, e);
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+                if (MessageBox.Show(General.trans.tr("Really want to delete: ") + General.employees[listBox1.SelectedIndex].GetInfo()[0], General.title, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    General.employees.RemoveAt(listBox1.SelectedIndex);
+            Flush_Window();
+        }
+
+        private void NewEButton_Click(object sender, EventArgs e)
+        {
+            textBox1.Show();
+            textBox2.Show();
+            textBox3.Show();
+            textBox4.Show();
+            textBox5.Show();
+            textBox6.Show();
+            textBox7.Show();
+            confirmButton.Show();
+            confirmButton.Focus();
+            editButton.Hide();
+            deleteButton.Hide();
+            newEButton.Hide();
+            nameLabel.Text = General.trans.tr("name");
+            sexLabel.Text = General.trans.tr("sex");
+            numberLabel.Text = General.trans.tr("number");
+            commentLabel.Text = General.trans.tr("comment");
+            emailLabel.Text = General.trans.tr("email");
+            eduLabel.Text = General.trans.tr("edu");
+            salaryLabel.Text = General.trans.tr("salary");
+            stat = "new";
         }
     }
 }

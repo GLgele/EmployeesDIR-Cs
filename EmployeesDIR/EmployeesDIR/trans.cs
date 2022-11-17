@@ -76,7 +76,8 @@ namespace EmployeesDIR
         }
         public string tr(string s)
         {
-            if (!(s.ToLower().Contains("debug")))
+            //List<string> except = new List<string> { "debug", "namelabel", "sexlabel", "numberlabel", "commentlabel", "emaillabel", "edulabel", "salarylabel" };
+            if (!(s.Contains("DNT") || s.ToLower().Contains("debug")))
             {
                 try
                 {
@@ -95,10 +96,14 @@ namespace EmployeesDIR
         {
             foreach (Control control in form.Controls)
             {
-                string tmp = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
-                if (tmp != "")
+                if(!(control.Tag is null)) { if (control.Tag.ToString().Contains("DNT")) continue; }
+                else
                 {
-                    control.Text = tmp;
+                    string tmp = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
+                    if (tmp != "")
+                    {
+                        control.Text = tmp;
+                    }
                 }
             }
             if (form is EmployeesDIR)

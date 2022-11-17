@@ -19,7 +19,7 @@
   "SettingsForm.languageComboBox": "",
   "SettingsForm.downloadComboBox": "",
   "EmployeesDIR.listBox1": "",
-  "EmployeesDIR.chooseButton": "Choose",
+  "EmployeesDIR.editButton": "Edit",
   "EmployeesDIR.menuStrip": "",
   "EmployeesDIR.fileMenu": "File",
   "EmployeesDIR.opsToolStripMenuItem": "Operations",
@@ -29,5 +29,18 @@
   "EmployeesDIR.settingsItem": "Settings",
   "EmployeesDIR.exitItem": "Exit",
   "EmployeesDIR.newEmployeeToolStripMenuItem": "New Employee",
-  "EmployeesDIR.aboutItem": "About"
+  "EmployeesDIR.aboutItem": "About",
+  "name": "Name",
+  "sex": "Sex",
+  "number": "Phone\nNumber",
+  "comment": "Comment",
+  "email": "E-mail",
+  "edu": "Education",
+  "salary": "Salary",
+  "EmployeesDIR.confirmButton": "Confirm",
+  "EmployeesDIR.deleteButton": "Delete",
+  "EmployeesDIR.newEButton": "New",
+  "EmployeesDIR.editInfoToolStripMenuItem": "Edit Info",
+  "EmployeesDIR.deleteEmployeeToolStripMenuItem": "Delete Employee",
+  "Really want to delete: ": "Really want to delete: "
 }

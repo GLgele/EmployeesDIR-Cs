@@ -39,6 +39,9 @@ namespace EmployeesDIR
         }
         [Obsolete] public int GetId() { return id; }
         public List<string> GetInfo() { List<string> lst = new List<string> { name, sex, number, comment, email, edu, salary }; return lst; }
+        public void ChangeInfo(string name, string sex, string number, string comment, string email, string edu, string salary)
+        { this.name = name; this.sex = sex; this.number = number; this.comment = comment; this.email = email; this.edu = edu; this.salary = salary; }
+        public void ChangeInfo(List<string> lst) { ChangeInfo(lst[0], lst[1], lst[2], lst[3], lst[4], lst[5], lst[6]); }
     }
 
     class General
@@ -85,9 +88,9 @@ namespace EmployeesDIR
                 foreach (Employee emp in General.employees)
                 {
                     List<string> lst = emp.GetInfo();
-                    foreach(string s in lst)
+                    foreach (string s in lst)
                     {
-                        file.Write(s+" ");
+                        file.Write(s + " ");
                         //Console.WriteLine(s);
                     }
                     file.Write("\n");
@@ -126,15 +129,15 @@ namespace EmployeesDIR
                 BinaryReader file = new BinaryReader(new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read));
                 int n = Convert.ToInt32(file.ReadInt32());
                 byte[] fw = file.ReadBytes(2);
-                for(int i=0;i<n;i++)
+                for (int i = 0; i < n; i++)
                 {
                     List<string> lst = new List<string>();
                     string tmp = "";
                     char chr = 'A';
-                    for (int ii = 0;ii<7;ii++)
+                    for (int ii = 0; ii < 7; ii++)
                     {
                         //lst.Add(file.Read());
-                        while(chr != ' ')
+                        while (chr != ' ')
                         {
                             chr = file.ReadChar();
                             tmp += chr;

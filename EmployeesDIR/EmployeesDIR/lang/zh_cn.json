@@ -19,7 +19,7 @@
 	"SettingsForm.languageComboBox": "",
 	"SettingsForm.downloadComboBox": "",
 	"EmployeesDIR.listBox1": "",
-	"EmployeesDIR.chooseButton": "选择",
+	"EmployeesDIR.editButton": "编辑",
 	"EmployeesDIR.menuStrip": "",
 	"EmployeesDIR.fileMenu": "文件",
 	"EmployeesDIR.opsToolStripMenuItem": "操作",
@@ -29,5 +29,18 @@
 	"EmployeesDIR.settingsItem": "设置",
 	"EmployeesDIR.exitItem": "退出",
 	"EmployeesDIR.newEmployeeToolStripMenuItem": "新员工",
-	"EmployeesDIR.aboutItem": "关于"
+	"EmployeesDIR.aboutItem": "关于",
+	"name": "姓名",
+	"sex": "性别",
+	"number": "电话",
+	"comment": "备注",
+	"email": "E-mail",
+	"edu": "学历",
+	"salary": "薪水",
+	"EmployeesDIR.confirmButton": "确认",
+	"EmployeesDIR.deleteButton": "删除",
+	"EmployeesDIR.newEButton": "新员工",
+	"EmployeesDIR.editInfoToolStripMenuItem": "编辑员工信息",
+	"EmployeesDIR.deleteEmployeeToolStripMenuItem": "删除该员工",
+	"Really want to delete: ": "确认删除员工："
 }
