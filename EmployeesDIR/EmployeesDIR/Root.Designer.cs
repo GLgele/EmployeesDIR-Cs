@@ -37,6 +37,8 @@ namespace EmployeesDIR
             this.exitItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutItem = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,10 +61,9 @@ namespace EmployeesDIR
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.confirmButton = new System.Windows.Forms.Button();
-            this.editInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteButton = new System.Windows.Forms.Button();
             this.newEButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,9 +135,23 @@ namespace EmployeesDIR
             // newEmployeeToolStripMenuItem
             // 
             this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
-            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.newEmployeeToolStripMenuItem.Text = "New Employee";
             this.newEmployeeToolStripMenuItem.Click += new System.EventHandler(this.newEmployeeToolStripMenuItem_Click);
+            // 
+            // editInfoToolStripMenuItem
+            // 
+            this.editInfoToolStripMenuItem.Name = "editInfoToolStripMenuItem";
+            this.editInfoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.editInfoToolStripMenuItem.Text = "Edit Info";
+            this.editInfoToolStripMenuItem.Click += new System.EventHandler(this.editInfoToolStripMenuItem_Click);
+            // 
+            // deleteEmployeeToolStripMenuItem
+            // 
+            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
+            this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
             // helpMenu
             // 
@@ -329,7 +344,7 @@ namespace EmployeesDIR
             // 
             // confirmButton
             // 
-            this.confirmButton.Location = new System.Drawing.Point(288, 382);
+            this.confirmButton.Location = new System.Drawing.Point(288, 345);
             this.confirmButton.Margin = new System.Windows.Forms.Padding(4);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(100, 29);
@@ -338,23 +353,9 @@ namespace EmployeesDIR
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
-            // editInfoToolStripMenuItem
-            // 
-            this.editInfoToolStripMenuItem.Name = "editInfoToolStripMenuItem";
-            this.editInfoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.editInfoToolStripMenuItem.Text = "Edit Info";
-            this.editInfoToolStripMenuItem.Click += new System.EventHandler(this.editInfoToolStripMenuItem_Click);
-            // 
-            // deleteEmployeeToolStripMenuItem
-            // 
-            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
-            this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
-            // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(504, 382);
+            this.deleteButton.Location = new System.Drawing.Point(396, 382);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(100, 29);
@@ -365,7 +366,7 @@ namespace EmployeesDIR
             // 
             // newEButton
             // 
-            this.newEButton.Location = new System.Drawing.Point(396, 382);
+            this.newEButton.Location = new System.Drawing.Point(288, 382);
             this.newEButton.Margin = new System.Windows.Forms.Padding(4);
             this.newEButton.Name = "newEButton";
             this.newEButton.Size = new System.Drawing.Size(100, 29);
@@ -374,11 +375,22 @@ namespace EmployeesDIR
             this.newEButton.UseVisualStyleBackColor = true;
             this.newEButton.Click += new System.EventHandler(this.NewEButton_Click);
             // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(396, 345);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(100, 29);
+            this.cancelButton.TabIndex = 20;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            // 
             // EmployeesDIR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 433);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.newEButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.confirmButton);
@@ -403,7 +415,7 @@ namespace EmployeesDIR
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EmployeesDIR";
-            this.Text = "EmployeesDIR - 3.0";
+            this.Text = "EmployeesDIR - 3.1";
             this.Load += new System.EventHandler(this.EmployeesDIR_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -455,6 +467,7 @@ namespace EmployeesDIR
         private System.Windows.Forms.ToolStripMenuItem deleteEmployeeToolStripMenuItem;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button newEButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }
 

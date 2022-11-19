@@ -1,8 +1,7 @@
 {
   "lang": "en_us",
   "language": "English",
-  "title": "EmployeesDIR - 3.0",
-  "EmployeesDIR - 3.0": "EmployeesDIR - 3.0",
+  "title": "EmployeesDIR - 3.1",
   "Really want to exit?": "Really want to exit?",
   "ErrorForm.viewLogButton": "View Log",
   "ErrorForm.copyButton": "Copy",
@@ -38,6 +37,7 @@
   "edu": "Education",
   "salary": "Salary",
   "EmployeesDIR.confirmButton": "Confirm",
+  "EmployeesDIR.cancelButton": "Cancel",
   "EmployeesDIR.deleteButton": "Delete",
   "EmployeesDIR.newEButton": "New",
   "EmployeesDIR.editInfoToolStripMenuItem": "Edit Info",

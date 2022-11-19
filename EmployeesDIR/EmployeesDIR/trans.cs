@@ -44,6 +44,8 @@ namespace EmployeesDIR
             file.Close();
             source = source.Replace("\r", "").Replace("\n", "").Replace("\t", "");
             //source = file.ToString();
+            #region Obsolete deserialize json function
+            /*
             JsonTextReader reader = new JsonTextReader(new StringReader(source));
             string tmp1 = "";
             string tmp2 = "";
@@ -69,6 +71,9 @@ namespace EmployeesDIR
                     //Console.WriteLine("Token: {0}", reader.TokenType);
                 }
             }
+            */
+            #endregion
+            dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(source);
         }
         ~trans()
         {

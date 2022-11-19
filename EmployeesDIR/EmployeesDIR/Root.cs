@@ -16,8 +16,24 @@ namespace EmployeesDIR
         private string stat = "";
         public EmployeesDIR()
         {
+
             InitializeComponent();
             this.FormClosing += new FormClosingEventHandler(Form_Closing);
+            if (General.Config.Update.autoCheck) this.Shown += new EventHandler(General.CheckUpdate);
+        }
+        private void EmployeesDIR_Load(object sender, EventArgs e)
+        {
+            General.logger.InfoFormat("Root winform loading. Event{0}", e.ToString());
+#if DEBUG
+            testDebugToolStripMenuItem.Available = true;
+            debugToolStripMenuItem.Available = true;
+            errorFormDebugToolStripMenuItem.Available = true;
+#else
+            testDebugToolStripMenuItem.Available = false;
+            debugToolStripMenuItem.Available = false;
+            errorFormDebugToolStripMenuItem.Available = false;
+#endif
+            Flush_Window();
             nameLabel.Text = "";
             sexLabel.Text = "";
             numberLabel.Text = "";
@@ -25,6 +41,16 @@ namespace EmployeesDIR
             emailLabel.Text = "";
             eduLabel.Text = "";
             salaryLabel.Text = "";
+            textBox1.Hide();
+            textBox2.Hide();
+            textBox3.Hide();
+            textBox4.Hide();
+            textBox5.Hide();
+            textBox6.Hide();
+            textBox7.Hide();
+            confirmButton.Hide();
+            cancelButton.Hide();
+            editButton.Focus();
         }
 
         private void Flush_Window()
@@ -109,30 +135,6 @@ namespace EmployeesDIR
             //errorform.Show();
         }
 
-        private void EmployeesDIR_Load(object sender, EventArgs e)
-        {
-            General.logger.InfoFormat("Root winform loading. Event{0}",e.ToString());
-#if DEBUG
-            testDebugToolStripMenuItem.Available = true;
-            debugToolStripMenuItem.Available = true;
-            errorFormDebugToolStripMenuItem.Available = true;
-#else
-            testDebugToolStripMenuItem.Available = false;
-            debugToolStripMenuItem.Available = false;
-            errorFormDebugToolStripMenuItem.Available = false;
-#endif
-            Flush_Window();
-            textBox1.Hide();
-            textBox2.Hide();
-            textBox3.Hide();
-            textBox4.Hide();
-            textBox5.Hide();
-            textBox6.Hide();
-            textBox7.Hide();
-            confirmButton.Hide();
-            editButton.Focus();
-        }
-
         private void exitItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(General.trans.tr("Really want to exit?"), General.title, MessageBoxButtons.YesNo) == DialogResult.Yes) 
@@ -195,6 +197,7 @@ namespace EmployeesDIR
                 textBox6.Show();
                 textBox7.Show();
                 confirmButton.Show();
+                cancelButton.Show();
                 editButton.Hide();
                 deleteButton.Hide();
                 newEButton.Hide();
@@ -271,6 +274,7 @@ namespace EmployeesDIR
             textBox6.Hide();
             textBox7.Hide();
             confirmButton.Hide();
+            cancelButton.Hide();
             editButton.Show();
             deleteButton.Show();
             newEButton.Show();
@@ -308,6 +312,7 @@ namespace EmployeesDIR
             textBox7.Show();
             confirmButton.Show();
             confirmButton.Focus();
+            cancelButton.Show();
             editButton.Hide();
             deleteButton.Hide();
             newEButton.Hide();
@@ -319,6 +324,25 @@ namespace EmployeesDIR
             eduLabel.Text = General.trans.tr("edu");
             salaryLabel.Text = General.trans.tr("salary");
             stat = "new";
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            textBox1.Hide();
+            textBox2.Hide();
+            textBox3.Hide();
+            textBox4.Hide();
+            textBox5.Hide();
+            textBox6.Hide();
+            textBox7.Hide();
+            confirmButton.Hide();
+            cancelButton.Hide();
+            editButton.Show();
+            deleteButton.Show();
+            newEButton.Show();
+            listBox1_SelectedIndexChanged(sender, e);
+            Flush_Window();
+            editButton.Focus();
         }
     }
 }

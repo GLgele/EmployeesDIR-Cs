@@ -29,6 +29,7 @@ namespace EmployeesDIR
             }
             languageComboBox.SelectedItem = trans.langDict2[General.Config.Language.lang];
             downloadComboBox.SelectedItem = General.Config.Update.source;
+            checkUpdateBox.Checked = General.Config.Update.autoCheck;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace EmployeesDIR
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            General.CheckUpdate();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -53,7 +54,16 @@ namespace EmployeesDIR
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            StreamWriter sw = new StreamWriter("config.ini");
+            sw.WriteLine("[Language]");
+            sw.Write("lang=");
+            sw.WriteLine(General.Config.Language.lang);
+            sw.WriteLine("[Update]");
+            sw.Write("source=");
+            sw.WriteLine(downloadComboBox.SelectedItem.ToString());
+            sw.Write("autoCheck=");
+            sw.WriteLine(checkUpdateBox.Checked);
+            sw.Close();
         }
 
         private void label1_Click_2(object sender, EventArgs e)
@@ -83,6 +93,8 @@ namespace EmployeesDIR
             sw.WriteLine("[Update]");
             sw.Write("source=");
             sw.WriteLine(downloadComboBox.SelectedItem.ToString());
+            sw.Write("autoCheck=");
+            sw.WriteLine(checkUpdateBox.Checked);
             sw.Close();
             cancelButton_Click(sender, e);
         }

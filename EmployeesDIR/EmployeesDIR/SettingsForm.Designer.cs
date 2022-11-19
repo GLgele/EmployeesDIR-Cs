@@ -78,7 +78,8 @@ namespace EmployeesDIR
             this.downloadComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.downloadComboBox.FormattingEnabled = true;
             this.downloadComboBox.Items.AddRange(new object[] {
-            "Github"});
+            "Github",
+            "Gitee"});
             this.downloadComboBox.Location = new System.Drawing.Point(186, 57);
             this.downloadComboBox.Name = "downloadComboBox";
             this.downloadComboBox.Size = new System.Drawing.Size(121, 23);

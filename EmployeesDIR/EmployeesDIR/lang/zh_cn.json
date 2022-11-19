@@ -1,8 +1,7 @@
 ﻿{
 	"lang": "zh_cn",
 	"language": "中文（简体）",
-	"title": "EmployeesDIR - 3.0",
-	"EmployeesDIR - 3.0": "EmployeesDIR - 3.0",
+	"title": "EmployeesDIR - 3.1",
 	"Really want to exit?": "确认退出吗？\n可能有未保存的数据",
 	"ErrorForm.viewLogButton": "查看\n日志",
 	"ErrorForm.copyButton": "复制\n消息",
@@ -38,6 +37,7 @@
 	"edu": "学历",
 	"salary": "薪水",
 	"EmployeesDIR.confirmButton": "确认",
+	"EmployeesDIR.cancelButton": "取消",
 	"EmployeesDIR.deleteButton": "删除",
 	"EmployeesDIR.newEButton": "新员工",
 	"EmployeesDIR.editInfoToolStripMenuItem": "编辑员工信息",
