@@ -200,13 +200,13 @@ namespace EmployeesDIR
             {
                 case "Github":
                     {
-                        GitHubUpdater.UpdateClient client = new GitHubUpdater.UpdateClient() { Author = "GLgele", RepositoryName = "EmployeesDIR-Cs", CurrentInstalledVersion = new Version(3, 1, 0) };
+                        GitHubUpdater.UpdateClient client = new GitHubUpdater.UpdateClient() { Author = "GLgele", RepositoryName = "EmployeesDIR-Cs", CurrentInstalledVersion = General.cver };
                         client.CheckIfLatest(f);
                         break;
                     }
                 case "Gitee":
                     {
-                        GitHubUpdater.UpdateClient client = new GitHubUpdater.UpdateClient() { Author = "GLgele", RepositoryName = "EmployeesDIR-Cs", CurrentInstalledVersion = new Version(3, 1, 0), BaseUrl = "https://gitee.com/api/v5/" };
+                        GitHubUpdater.UpdateClient client = new GitHubUpdater.UpdateClient() { Author = "GLgele", RepositoryName = "EmployeesDIR-Cs", CurrentInstalledVersion = General.cver, BaseUrl = "https://gitee.com/api/v5/" };
                         client.CheckIfLatest(f);
                         break;
                     }
