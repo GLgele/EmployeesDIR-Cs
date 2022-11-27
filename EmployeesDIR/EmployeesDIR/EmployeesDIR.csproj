@@ -56,10 +56,10 @@
     <StartupObject>EmployeesDIR.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>1DFA7FB3BC98FBADFB56A5DBBF0D8F2C400A29DB</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>20805F91F64BDA5E5B18C09F429DD1EA5053B98A</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>EmployeesDIR_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>EmployeesDIR_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -221,6 +221,8 @@
     </Compile>
     <Compile Include="Shell.cs" />
     <Compile Include="trans.cs" />
+    <None Include="EmployeesDIR_1_TemporaryKey.pfx" />
+    <None Include="log4net.config" />
     <None Include="[Obsolete]\GithubRelease.cs" />
     <Compile Include="[Obsolete]\TextEventArgs.cs" />
     <None Include="[Obsolete]\WebApi.cs" />
@@ -250,9 +252,6 @@
     <Content Include="lang\zh_cn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="log4net.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -285,6 +284,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>copy $(SolutionDir)$(OutDir)config.ini $(SolutionDir)</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>

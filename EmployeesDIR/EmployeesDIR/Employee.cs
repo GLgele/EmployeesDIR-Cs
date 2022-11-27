@@ -50,7 +50,7 @@ namespace EmployeesDIR
         protected static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
         [DllImport("kernel32")]
         protected static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
-        public static readonly Version cver = new Version(3, 1, 0);
+        public static readonly Version cver = new Version(3, 1, 1);
         public static readonly string title = $"EmployeesDIR - {cver.Major}.{cver.Minor}";
         public static readonly Mylog.Mylog logger = new Mylog.Mylog() /*LogManager.GetLogger(typeof(Program))*/;
         public static string iniFilePath = "config.ini";

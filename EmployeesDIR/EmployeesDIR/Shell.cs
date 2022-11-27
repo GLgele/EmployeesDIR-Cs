@@ -65,16 +65,16 @@ namespace Mylog
             ((log4net.Repository.Hierarchy.Hierarchy)LogManager.GetRepository()).Root.Level = log4net.Core.Level.Info;
 #endif
         }
-        public void Info(string msg) { log.Info(msg); /*Shell.Shell.WriteLine(msg);*/ }
-        public void InfoFormat(string format, params object[] args) { log.InfoFormat(format, args); /*Shell.Shell.WriteLine(format,args);*/ }
-        public void Debug(string msg) { log.Debug(msg); /*Shell.Shell.WriteLine(msg); */}
-        public void DebugFormat(string format, params object[] args) { log.DebugFormat(format, args); /*Shell.Shell.WriteLine(format, args); */}
-        public void Warn(string msg) { log.Warn(msg); /*Shell.Shell.WriteLine(msg); */}
-        public void WarnFormat(string format, params object[] args) { log.WarnFormat(format, args); /*Shell.Shell.WriteLine(format, args);*/ }
-        public void Error(string msg) { log.Error(msg); /*Shell.Shell.WriteLine(msg);*/ }
-        public void ErrorFormat(string format, params object[] args) { log.ErrorFormat(format, args); /*Shell.Shell.WriteLine(format, args); */}
-        public void Fatal(string msg) { log.Fatal(msg); /*Shell.Shell.WriteLine(msg);*/ }
-        public void FatalFormat(string format, params object[] args) { log.FatalFormat(format, args); /*Shell.Shell.WriteLine(format, args);*/ }
+        public void Info(string msg) { log.Info(msg); msg = "DEBUG " + msg; Shell.Shell.WriteLine(msg); }
+        public void InfoFormat(string format, params object[] args) { log.InfoFormat(format, args); format = "DEBUG " + format; Shell.Shell.WriteLine(format,args); }
+        public void Debug(string msg) { log.Debug(msg); msg = "INFO " + msg; Shell.Shell.WriteLine(msg); }
+        public void DebugFormat(string format, params object[] args) { log.DebugFormat(format, args); format = "INFO " + format; Shell.Shell.WriteLine(format, args); }
+        public void Warn(string msg) { log.Warn(msg); msg = "WARN " + msg; Shell.Shell.WriteLine(msg); }
+        public void WarnFormat(string format, params object[] args) { log.WarnFormat(format, args); format = "WARN " + format; Shell.Shell.WriteLine(format, args); }
+        public void Error(string msg) { log.Error(msg); msg = "ERROR " + msg; Shell.Shell.WriteLine(msg); }
+        public void ErrorFormat(string format, params object[] args) { log.ErrorFormat(format, args); format = "ERROR " + format; Shell.Shell.WriteLine(format, args); }
+        public void Fatal(string msg) { log.Fatal(msg); msg = "FATAL " + msg; Shell.Shell.WriteLine(msg); }
+        public void FatalFormat(string format, params object[] args) { log.FatalFormat(format, args); format = "DATAL " + format; Shell.Shell.WriteLine(format, args); }
     }
             
     

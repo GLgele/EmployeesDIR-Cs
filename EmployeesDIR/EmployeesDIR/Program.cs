@@ -10,26 +10,33 @@ namespace EmployeesDIR
 {
     static class Program
     {
-        /// <summary>
-        /// 应用程序的主入口点。
-        /// </summary>
-
-#if DEBUG
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
         [DllImport("kernel32.dll")]
         static extern bool FreeConsole();
-#endif
+
+        /// <summary>
+        /// 应用程序的主入口点。
+        /// </summary>
+
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             General.logger.Info("Entering application.");
-
 #if DEBUG
             //AllocConsole();
             //Application.SetHighDpiMode(HighDpiMode.SystemAware);
 #endif
+#if !DEBUG
+            if(!args.Contains("--debug"))
+            FreeConsole();
+#endif
+            if (args.Contains("--debug"))
+            {
+                General.logger.Warn("Debug Mode On!");
+                AllocConsole();
+            }
             //Shell.Shell.WriteLine("Info:infotest");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

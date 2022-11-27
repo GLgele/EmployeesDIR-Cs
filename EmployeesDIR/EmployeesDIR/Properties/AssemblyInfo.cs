@@ -37,5 +37,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("3.0.0.0")]
 [assembly: NeutralResourcesLanguage("zh-CN")]
 
-// Apache log4net
+// Apache
+// 
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", ConfigFileExtension = "config", Watch = true)]

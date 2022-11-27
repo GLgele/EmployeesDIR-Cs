@@ -125,7 +125,7 @@ namespace EmployeesDIR
         private void ConfigReload(object sender ,EventArgs e) 
         {
             ConfigReload();
-            Console.WriteLine(General.Config.Language.lang);
+            //Console.WriteLine(General.Config.Language.lang);
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
@@ -310,6 +310,13 @@ namespace EmployeesDIR
             textBox5.Show();
             textBox6.Show();
             textBox7.Show();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
             confirmButton.Show();
             confirmButton.Focus();
             cancelButton.Show();
