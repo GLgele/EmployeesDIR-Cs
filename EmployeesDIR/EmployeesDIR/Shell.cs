@@ -58,7 +58,7 @@ namespace Mylog
         public Mylog()
         {
             
-            log4net.Config.BasicConfigurator.Configure();
+            //log4net.Config.BasicConfigurator.Configure();
 #if DEBUG
             ((log4net.Repository.Hierarchy.Hierarchy)LogManager.GetRepository()).Root.Level = log4net.Core.Level.Debug;
 #else
@@ -74,7 +74,7 @@ namespace Mylog
         public void Error(string msg) { log.Error(msg); msg = "ERROR " + msg; Shell.Shell.WriteLine(msg); }
         public void ErrorFormat(string format, params object[] args) { log.ErrorFormat(format, args); format = "ERROR " + format; Shell.Shell.WriteLine(format, args); }
         public void Fatal(string msg) { log.Fatal(msg); msg = "FATAL " + msg; Shell.Shell.WriteLine(msg); }
-        public void FatalFormat(string format, params object[] args) { log.FatalFormat(format, args); format = "DATAL " + format; Shell.Shell.WriteLine(format, args); }
+        public void FatalFormat(string format, params object[] args) { log.FatalFormat(format, args); format = "FATAL " + format; Shell.Shell.WriteLine(format, args); }
     }
             
     

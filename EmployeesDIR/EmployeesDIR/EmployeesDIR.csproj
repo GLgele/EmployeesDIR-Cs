@@ -56,7 +56,7 @@
     <StartupObject>EmployeesDIR.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>20805F91F64BDA5E5B18C09F429DD1EA5053B98A</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>970DDDC88DE2CEB18A163CCAF9B92C8ED0E5E80A</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>EmployeesDIR_1_TemporaryKey.pfx</ManifestKeyFile>
@@ -194,6 +194,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
@@ -222,7 +223,9 @@
     <Compile Include="Shell.cs" />
     <Compile Include="trans.cs" />
     <None Include="EmployeesDIR_1_TemporaryKey.pfx" />
-    <None Include="log4net.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="[Obsolete]\GithubRelease.cs" />
     <Compile Include="[Obsolete]\TextEventArgs.cs" />
     <None Include="[Obsolete]\WebApi.cs" />
