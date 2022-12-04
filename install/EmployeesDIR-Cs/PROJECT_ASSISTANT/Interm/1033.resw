@@ -6,13 +6,7 @@
 	<data name="Publisher" xml:space="preserve">
 		<value>Your Company Name</value>
 	</data>
-	<data name="EmployeesDIR.exe1_Name" xml:space="preserve">
-		<value>Launch EmployeesDIR.exe</value>
-	</data>
 	<data name="UNINST_Uninstall_EmployeesDIR_Cs_Name" xml:space="preserve">
 		<value>UNINST|Uninstall EmployeesDIR-Cs</value>
-	</data>
-	<data name="EmployeesDIR.exe_Name" xml:space="preserve">
-		<value>Launch EmployeesDIR.exe</value>
 	</data>
 </root>
