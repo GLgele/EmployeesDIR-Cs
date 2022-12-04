@@ -29,6 +29,7 @@ namespace Shell
         /// <param name="output"></param>  
         public static void WriteLine(string output)
         {
+            if (!EmployeesDIR.General.isRDebug) return;
             Console.ForegroundColor = GetConsoleColor(output);
             Console.WriteLine(@"[{0}]{1}", DateTimeOffset.Now, output);
         }

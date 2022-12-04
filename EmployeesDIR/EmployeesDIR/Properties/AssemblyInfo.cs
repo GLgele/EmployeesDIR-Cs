@@ -1,4 +1,4 @@
-﻿using System.Resources;
+using System.Resources;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("EmployeesDIR")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Dream Border X")]
 [assembly: AssemblyProduct("EmployeesDIR")]
 [assembly: AssemblyCopyright("Copyright ©  GLgele 2022")]
 [assembly: AssemblyTrademark("")]
@@ -33,8 +33,8 @@ using System.Runtime.InteropServices;
 //可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值
 //通过使用 "*"，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.1.0.9")]
-[assembly: AssemblyFileVersion("3.1.0.9")]
+[assembly: AssemblyVersion("3.2.1.14")]
+[assembly: AssemblyFileVersion("3.2.1.14(20221204)")]
 [assembly: NeutralResourcesLanguage("zh-CN")]
 
 // Apache

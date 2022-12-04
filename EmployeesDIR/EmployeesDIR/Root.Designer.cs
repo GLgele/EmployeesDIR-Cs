@@ -294,7 +294,7 @@ namespace EmployeesDIR
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(248, 38);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 21);
             this.textBox1.TabIndex = 10;
@@ -303,7 +303,7 @@ namespace EmployeesDIR
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(248, 62);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(76, 21);
             this.textBox2.TabIndex = 11;
@@ -312,7 +312,7 @@ namespace EmployeesDIR
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(248, 86);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(76, 21);
             this.textBox3.TabIndex = 12;
@@ -321,7 +321,7 @@ namespace EmployeesDIR
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(248, 110);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(76, 21);
             this.textBox4.TabIndex = 13;
@@ -330,7 +330,7 @@ namespace EmployeesDIR
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(248, 134);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(76, 21);
             this.textBox5.TabIndex = 14;
@@ -339,7 +339,7 @@ namespace EmployeesDIR
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(248, 158);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(76, 21);
             this.textBox6.TabIndex = 15;
@@ -348,7 +348,7 @@ namespace EmployeesDIR
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(248, 182);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(76, 21);
             this.textBox7.TabIndex = 16;
@@ -422,9 +422,9 @@ namespace EmployeesDIR
             this.Controls.Add(this.menuStrip);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EmployeesDIR";
-            this.Text = "EmployeesDIR - 3.1";
+            this.Text = "EmployeesDIR - 3.2";
             this.Load += new System.EventHandler(this.EmployeesDIR_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

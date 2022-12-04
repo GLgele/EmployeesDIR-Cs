@@ -50,6 +50,7 @@ namespace EmployeesDIR
         protected static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
         [DllImport("kernel32")]
         protected static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
+        public static bool isRDebug = false;
         private static readonly string[] scver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString().Split('.');
         public static readonly Version cver = new Version(Convert.ToInt32(scver[0]), Convert.ToInt32(scver[1]), Convert.ToInt32(scver[2]));
         public static readonly string title = $"EmployeesDIR - {cver.Major}.{cver.Minor}";

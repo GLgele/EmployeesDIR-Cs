@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -27,14 +28,16 @@ namespace EmployeesDIR
 #if DEBUG
             //AllocConsole();
             //Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            
 #endif
 #if !DEBUG
-            if(!args.Contains("--debug"))
-            FreeConsole();
+            if (!args.Contains("--debug"))
+                FreeConsole();
 #endif
             if (args.Contains("--debug"))
             {
                 General.logger.Warn("Debug Mode On!");
+                General.isRDebug = true;
                 AllocConsole();
             }
             //Shell.Shell.WriteLine("Info:infotest");

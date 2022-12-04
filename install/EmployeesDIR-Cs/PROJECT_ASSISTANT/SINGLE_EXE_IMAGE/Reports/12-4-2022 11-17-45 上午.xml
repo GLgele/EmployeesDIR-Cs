@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:\Program Files (x86)\InstallShield\2021\Support\0409\buildreport.xsl"?>
+<BuildReport ProductName="EmployeesDIR-Cs" ProductVersion="3.2.1.11" Built="12-4-2022 11-17-45 上午" Config="PROJECT_ASSISTANT" Media="SINGLE_EXE_IMAGE" Uncompressed="0.00 MB">
+  <Features>
+    <Feature Title="##IDS_FEATURE_DISPLAY_NAME1##">EmployeesDIR_Cs_Files</Feature>
+  </Features>
+  <Components>
+    <Component x64="32">AllOtherFiles</Component>
+    <Component x64="32">AllOtherFiles1</Component>
+    <Component x64="32">EmployeesDIR.exe</Component>
+    <Component x64="32" KeyPath="employeesdir.exe">EmployeesDIR.exe1</Component>
+    <Component x64="32">GitHubUpdater.dll</Component>
+    <Component x64="32" KeyPath="githubupdater.dll">GitHubUpdater.dll1</Component>
+    <Component x64="32">IS_ININSTALL_SHORTCUT</Component>
+    <Component x64="32">Markdig.dll</Component>
+    <Component x64="32" KeyPath="markdig.dll">Markdig.dll1</Component>
+    <Component x64="32">Microsoft.Bcl.AsyncInterfaces.dll</Component>
+    <Component x64="32" KeyPath="microsoft.bcl.asyncinterface">Microsoft.Bcl.AsyncInterfaces.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.Configuration.Abstractions.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.configu">Microsoft.Extensions.Configuration.Abstractions.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.Configuration.Binder.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.configu1">Microsoft.Extensions.Configuration.Binder.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.Configuration.FileExtensions.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.configu3">Microsoft.Extensions.Configuration.FileExtensions.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.Configuration.Ini.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.configu4">Microsoft.Extensions.Configuration.Ini.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.Configuration.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.configu2">Microsoft.Extensions.Configuration.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.DependencyInjection.Abstractions.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.depende">Microsoft.Extensions.DependencyInjection.Abstractions.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.DependencyInjection.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.depende1">Microsoft.Extensions.DependencyInjection.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.FileProviders.Abstractions.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.filepro">Microsoft.Extensions.FileProviders.Abstractions.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.FileProviders.Physical.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.filepro1">Microsoft.Extensions.FileProviders.Physical.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.FileSystemGlobbing.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.filesys">Microsoft.Extensions.FileSystemGlobbing.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.Logging.Abstractions.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.logging">Microsoft.Extensions.Logging.Abstractions.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.Options.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.options">Microsoft.Extensions.Options.dll1</Component>
+    <Component x64="32">Microsoft.Extensions.Primitives.dll</Component>
+    <Component x64="32" KeyPath="microsoft.extensions.primiti">Microsoft.Extensions.Primitives.dll1</Component>
+    <Component x64="32">Newtonsoft.Json.dll</Component>
+    <Component x64="32" KeyPath="newtonsoft.json.dll">Newtonsoft.Json.dll1</Component>
+    <Component x64="32">PlexDL.AltoHTTP.dll</Component>
+    <Component x64="32" KeyPath="plexdl.altohttp.dll">PlexDL.AltoHTTP.dll1</Component>
+    <Component x64="32">PlexDL.Animation.dll</Component>
+    <Component x64="32" KeyPath="plexdl.animation.dll">PlexDL.Animation.dll1</Component>
+    <Component x64="32">PlexDL.Common.Components.dll</Component>
+    <Component x64="32" KeyPath="plexdl.common.components.dll">PlexDL.Common.Components.dll1</Component>
+    <Component x64="32">PlexDL.Common.Enums.dll</Component>
+    <Component x64="32" KeyPath="plexdl.common.enums.dll">PlexDL.Common.Enums.dll1</Component>
+    <Component x64="32">PlexDL.Common.Security.dll</Component>
+    <Component x64="32" KeyPath="plexdl.common.security.dll">PlexDL.Common.Security.dll1</Component>
+    <Component x64="32">PlexDL.ResourceProvider.dll</Component>
+    <Component x64="32" KeyPath="plexdl.resourceprovider.dll">PlexDL.ResourceProvider.dll1</Component>
+    <Component x64="32">PlexDL.WaitWindow.dll</Component>
+    <Component x64="32" KeyPath="plexdl.waitwindow.dll">PlexDL.WaitWindow.dll1</Component>
+    <Component x64="32">RestSharp.dll</Component>
+    <Component x64="32" KeyPath="restsharp.dll">RestSharp.dll1</Component>
+    <Component x64="32">System.Buffers.dll</Component>
+    <Component x64="32" KeyPath="system.buffers.dll">System.Buffers.dll1</Component>
+    <Component x64="32">System.Diagnostics.DiagnosticSource.dll</Component>
+    <Component x64="32" KeyPath="system.diagnostics.diagnosti">System.Diagnostics.DiagnosticSource.dll1</Component>
+    <Component x64="32">System.Memory.dll</Component>
+    <Component x64="32" KeyPath="system.memory.dll">System.Memory.dll1</Component>
+    <Component x64="32">System.Numerics.Vectors.dll</Component>
+    <Component x64="32" KeyPath="system.numerics.vectors.dll">System.Numerics.Vectors.dll1</Component>
+    <Component x64="32">System.Runtime.CompilerServices.Unsafe.dll</Component>
+    <Component x64="32" KeyPath="system.runtime.compilerservi">System.Runtime.CompilerServices.Unsafe.dll1</Component>
+    <Component x64="32">System.Threading.Tasks.Extensions.dll</Component>
+    <Component x64="32" KeyPath="system.threading.tasks.exten">System.Threading.Tasks.Extensions.dll1</Component>
+    <Component x64="32">System.ValueTuple.dll</Component>
+    <Component x64="32" KeyPath="system.valuetuple.dll">System.ValueTuple.dll1</Component>
+    <Component x64="32">UIHelpers.dll</Component>
+    <Component x64="32" KeyPath="uihelpers.dll">UIHelpers.dll1</Component>
+    <Component x64="32" KeyPath="_E973AFA44776301540F9160EC385998A">_B9A6089F7303CF6BADAD17D90996BF6C</Component>
+    <Component x64="32">inet.dll</Component>
+    <Component x64="32" KeyPath="inet.dll">inet.dll1</Component>
+    <Component x64="32">log4net.dll</Component>
+    <Component x64="32" KeyPath="log4net.dll">log4net.dll1</Component>
+  </Components>
+  <Prerequisites>
+    <Prerequisite>Microsoft .NET Framework 4.7.2 Full</Prerequisite>
+  </Prerequisites>
+  <MergeModules />
+  <DynamicLinks />
+  <Files>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="EmployeesDIR.exe1" Modified="2022/12/4 11:15:59" Size="38400" Version="3.2.1.13">EmployeesDIR.exe</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="_B9A6089F7303CF6BADAD17D90996BF6C" Modified="2019/12/7 17:10:36" Size="30768" Version="4.8.4084.0">System.Security.Cryptography.Algorithms.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Markdig.dll1" Modified="2022/12/1 16:22:12" Size="443904" Version="0.25.0.0">Markdig.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Bcl.AsyncInterfaces.dll1" Modified="2020/10/20 2:40:36" Size="20872" Version="5.0.20.51904">Microsoft.Bcl.AsyncInterfaces.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.Configuration.Abstractions.dll1" Modified="2020/10/20 2:48:44" Size="20360" Version="5.0.20.51904">Microsoft.Extensions.Configuration.Abstractions.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.Configuration.Binder.dll1" Modified="2020/10/20 2:49:14" Size="28040" Version="5.0.20.51904">Microsoft.Extensions.Configuration.Binder.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.Configuration.dll1" Modified="2020/10/20 2:49:16" Size="30600" Version="5.0.20.51904">Microsoft.Extensions.Configuration.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.Configuration.FileExtensions.dll1" Modified="2020/10/20 2:51:18" Size="25480" Version="5.0.20.51904">Microsoft.Extensions.Configuration.FileExtensions.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.Configuration.Ini.dll1" Modified="2020/10/20 2:53:18" Size="22920" Version="5.0.20.51904">Microsoft.Extensions.Configuration.Ini.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.DependencyInjection.Abstractions.dll1" Modified="2020/10/20 2:48:00" Size="44416" Version="5.0.20.51904">Microsoft.Extensions.DependencyInjection.Abstractions.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.DependencyInjection.dll1" Modified="2020/10/20 2:48:18" Size="76168" Version="5.0.20.51904">Microsoft.Extensions.DependencyInjection.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.FileProviders.Abstractions.dll1" Modified="2020/10/20 2:48:44" Size="16776" Version="5.0.20.51904">Microsoft.Extensions.FileProviders.Abstractions.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.FileProviders.Physical.dll1" Modified="2020/10/20 2:49:36" Size="35712" Version="5.0.20.51904">Microsoft.Extensions.FileProviders.Physical.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.FileSystemGlobbing.dll1" Modified="2020/10/20 2:48:04" Size="39816" Version="5.0.20.51904">Microsoft.Extensions.FileSystemGlobbing.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.Logging.Abstractions.dll1" Modified="2020/10/20 2:48:14" Size="52616" Version="5.0.20.51904">Microsoft.Extensions.Logging.Abstractions.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.Options.dll1" Modified="2020/10/20 2:48:48" Size="55176" Version="5.0.20.51904">Microsoft.Extensions.Options.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Microsoft.Extensions.Primitives.dll1" Modified="2020/10/20 2:48:14" Size="42376" Version="5.0.20.51904">Microsoft.Extensions.Primitives.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="Newtonsoft.Json.dll1" Modified="2021/3/18 4:03:36" Size="701992" Version="13.0.1.25517">Newtonsoft.Json.dll</File>
+    <File Destination="{LANG} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs\lang" Component="AllOtherFiles" Modified="2022/12/1 16:22:12" Size="1729" Version="">en_us.json</File>
+    <File Destination="{LANG} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs\lang" Component="AllOtherFiles" Modified="2022/12/1 16:22:12" Size="1765" Version="">zh_cn.json</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="AllOtherFiles1" Modified="2022/12/1 16:22:12" Size="66" Version="">config.ini</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="AllOtherFiles1" Modified="2022/12/4 11:15:59" Size="30032" Version="">EmployeesDIR.exe.manifest</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="AllOtherFiles1" Modified="2022/12/4 11:16:00" Size="1864" Version="">EmployeesDIR.application</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="AllOtherFiles1" Modified="2022/12/1 16:22:12" Size="565" Version="">EmployeesDIR.exe.config</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="log4net.dll1" Modified="2021/12/17 18:45:06" Size="270336" Version="2.0.14.0">log4net.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="GitHubUpdater.dll1" Modified="2022/12/1 16:22:12" Size="145408" Version="1.0.0.0">GitHubUpdater.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="inet.dll1" Modified="2022/12/1 16:22:13" Size="4096" Version="1.0.0.0">inet.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="PlexDL.AltoHTTP.dll1" Modified="2022/12/1 16:22:12" Size="26624" Version="1.0.0.0">PlexDL.AltoHTTP.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="PlexDL.Animation.dll1" Modified="2022/12/1 16:22:13" Size="37376" Version="1.0.0.0">PlexDL.Animation.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="PlexDL.Common.Components.dll1" Modified="2022/12/1 16:22:13" Size="96768" Version="1.0.0.0">PlexDL.Common.Components.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="PlexDL.Common.Enums.dll1" Modified="2022/12/1 16:22:13" Size="4608" Version="1.0.0.0">PlexDL.Common.Enums.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="PlexDL.Common.Security.dll1" Modified="2022/12/1 16:22:13" Size="12288" Version="1.0.0.0">PlexDL.Common.Security.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="PlexDL.ResourceProvider.dll1" Modified="2022/12/1 16:22:13" Size="22528" Version="1.0.0.0">PlexDL.ResourceProvider.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="PlexDL.WaitWindow.dll1" Modified="2022/12/1 16:22:13" Size="11776" Version="1.0.0.0">PlexDL.WaitWindow.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="RestSharp.dll1" Modified="2022/12/1 16:22:13" Size="190976" Version="106.12.0.0">RestSharp.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="System.Buffers.dll1" Modified="2020/2/19 18:05:18" Size="20856" Version="4.6.28619.1">System.Buffers.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="System.Diagnostics.DiagnosticSource.dll1" Modified="2020/10/20 2:38:30" Size="98184" Version="5.0.20.51904">System.Diagnostics.DiagnosticSource.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="System.Memory.dll1" Modified="2020/2/19 18:05:18" Size="141184" Version="4.6.28619.1">System.Memory.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="System.Numerics.Vectors.dll1" Modified="2018/5/15 21:29:44" Size="115856" Version="4.6.26515.6">System.Numerics.Vectors.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="System.Runtime.CompilerServices.Unsafe.dll1" Modified="2020/10/20 2:46:30" Size="16768" Version="5.0.20.51904">System.Runtime.CompilerServices.Unsafe.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="System.Threading.Tasks.Extensions.dll1" Modified="2020/2/19 18:05:18" Size="25984" Version="4.6.28619.1">System.Threading.Tasks.Extensions.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="System.ValueTuple.dll1" Modified="2018/5/15 21:29:52" Size="25232" Version="4.6.26515.6">System.ValueTuple.dll</File>
+    <File Destination="{INSTALLDIR} [ProgramFilesFolder]DreamBX\EmployeesDIR-Cs" Component="UIHelpers.dll1" Modified="2022/12/1 16:22:13" Size="5120" Version="1.0.0.0">UIHelpers.dll</File>
+  </Files>
+</BuildReport>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<data name="Name" xml:space="preserve">
+		<value>EmployeesDIR-Cs</value>
+	</data>
+	<data name="Publisher" xml:space="preserve">
+		<value>Dream Border X</value>
+	</data>
+	<data name="EmployeesDIR.exe1_Name" xml:space="preserve">
+		<value>Launch EmployeesDIR.exe</value>
+	</data>
+	<data name="UNINST_Uninstall_EmployeesDIR_Cs_Name" xml:space="preserve">
+		<value>UNINST|Uninstall EmployeesDIR-Cs</value>
+	</data>
+	<data name="EmployeesDIR.exe_Name" xml:space="preserve">
+		<value>Launch EmployeesDIR.exe</value>
+	</data>
+	<data name="EmployeesDIR.exe2_Name" xml:space="preserve">
+		<value>Launch EmployeesDIR.exe</value>
+	</data>
+</root>
