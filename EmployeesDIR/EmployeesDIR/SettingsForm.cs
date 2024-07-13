@@ -22,14 +22,14 @@ namespace EmployeesDIR
         {
             General.logger.Debug("New Settings Form.");
             General.trans.Init(this);
-            if(General.Config.Language.lang == "zh_cn")
+            if(General.config.Language.lang == "zh_cn")
             {
                 //checkUpdateButton.Location.X = 186;
                 checkUpdateButton.Location = new Point(176, 23);
             }
-            languageComboBox.SelectedItem = trans.langDict2[General.Config.Language.lang];
-            downloadComboBox.SelectedItem = General.Config.Update.source;
-            checkUpdateBox.Checked = General.Config.Update.autoCheck;
+            languageComboBox.SelectedItem = Trans.langDict2[General.config.Language.lang];
+            downloadComboBox.SelectedItem = General.config.Update.source;
+            checkUpdateBox.Checked = General.config.Update.autoCheck;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace EmployeesDIR
             StreamWriter sw = new StreamWriter("config.ini");
             sw.WriteLine("[Language]");
             sw.Write("lang=");
-            sw.WriteLine(General.Config.Language.lang);
+            sw.WriteLine(General.config.Language.lang);
             sw.WriteLine("[Update]");
             sw.Write("source=");
             sw.WriteLine(downloadComboBox.SelectedItem.ToString());
@@ -81,15 +81,15 @@ namespace EmployeesDIR
         private void OKButton_Click(object sender, EventArgs e)
         {
             //save ini here
-            //General.IniWriteVaule(General.iniFilePath, "Language", "lang", languageComboBox.SelectedText);
-            //General.IniWriteVaule(General.iniFilePath, "Update", "source", downloadComboBox.SelectedText);
+            //General.IniWriteValue(General.iniFilePath, "Language", "lang", languageComboBox.SelectedText);
+            //General.IniWriteValue(General.iniFilePath, "Update", "source", downloadComboBox.SelectedText);
             //Console.WriteLine(languageComboBox.SelectedText);
             //IniHelper.Write("Language", "lang", trans.langDict[languageComboBox.SelectedItem.ToString()], General.iniFilePath);
             //IniHelper.Write("Update", "source", downloadComboBox.SelectedItem.ToString(),General.iniFilePath);
             StreamWriter sw = new StreamWriter("config.ini");
             sw.WriteLine("[Language]");
             sw.Write("lang=");
-            sw.WriteLine(trans.langDict[languageComboBox.SelectedItem.ToString()]);
+            sw.WriteLine(Trans.langDict[languageComboBox.SelectedItem.ToString()]);
             sw.WriteLine("[Update]");
             sw.Write("source=");
             sw.WriteLine(downloadComboBox.SelectedItem.ToString());

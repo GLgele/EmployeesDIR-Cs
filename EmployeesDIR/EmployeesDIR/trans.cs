@@ -10,10 +10,10 @@ using Newtonsoft.Json;
 namespace EmployeesDIR
 {
     //[Obsolete]
-    /// </summary>
+    /// <summary>
     /// 不再使用 改为winform多语言
     /// </summary>
-    class trans : General
+    class Trans : General
     {
         public static readonly Dictionary<string, string> langDict = new Dictionary<string, string>() { { "中文（简体）", "zh_cn" }, { "English", "en_us" } };
         public static readonly Dictionary<string, string> langDict2 = langDict.ToDictionary(k => k.Value, p => p.Key);
@@ -21,9 +21,9 @@ namespace EmployeesDIR
         private string source;
         private StreamReader file;
         private Dictionary<string, string> dict = new Dictionary<string, string>();
-        public trans()
+        public Trans()
         {
-            lang = Config.Language.lang;
+            lang = config.Language.lang;
             //lang = langDict[lang];
             logger.DebugFormat("Language:{0}", langDict2[lang]);
             try
@@ -75,7 +75,7 @@ namespace EmployeesDIR
             #endregion
             dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(source);
         }
-        ~trans()
+        ~Trans()
         {
             file.Dispose();
         }

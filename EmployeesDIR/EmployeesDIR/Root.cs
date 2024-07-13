@@ -19,19 +19,24 @@ namespace EmployeesDIR
 
             InitializeComponent();
             this.FormClosing += new FormClosingEventHandler(Form_Closing);
-            if (General.Config.Update.autoCheck) this.Shown += new EventHandler(General.CheckUpdate);
+            if (General.config.Update.autoCheck) this.Shown += new EventHandler(General.CheckUpdate);
         }
         private void EmployeesDIR_Load(object sender, EventArgs e)
         {
             General.logger.InfoFormat("Root winform loading. Event{0}", e.ToString());
 #if DEBUG
-            testDebugToolStripMenuItem.Available = true;
+            debugToolStripMenuItem.Available = true;
+            /*testDebugToolStripMenuItem.Available = true;
             debugToolStripMenuItem.Available = true;
             errorFormDebugToolStripMenuItem.Available = true;
+            loginWindowToolStripMenuItem.Available = true;*/
+            //foreach (ToolStripItem item in debugToolStripMenuItem.DropDownItems) {item.Available = true;}
 #else
-            testDebugToolStripMenuItem.Available = false;
             debugToolStripMenuItem.Available = false;
-            errorFormDebugToolStripMenuItem.Available = false;
+            /*testDebugToolStripMenuItem.Available = false;
+            debugToolStripMenuItem.Available = false;
+            errorFormDebugToolStripMenuItem.Available = false;*/
+            //foreach (ToolStripItem item in debugToolStripMenuItem.DropDownItems) {item.Available = false;}
 #endif
             Flush_Window();
             nameLabel.Text = "";
@@ -118,8 +123,8 @@ namespace EmployeesDIR
 
         private void ConfigReload()
         {
-            General.Config = AppConfig.Get();
-            General.trans = new trans();
+            General.config = AppConfig.Get();
+            General.trans = new Trans();
         }
 
         private void ConfigReload(object sender ,EventArgs e) 
@@ -145,7 +150,7 @@ namespace EmployeesDIR
 
         private void saveItem_Click(object sender, EventArgs e)
         {
-            General.saveData();
+            General.SaveData();
         }
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
@@ -156,7 +161,7 @@ namespace EmployeesDIR
 
         private void openItem_Click(object sender, EventArgs e)
         {
-            General.openData();
+            General.OpenData();
             Flush_Window();
         }
 
@@ -296,8 +301,14 @@ namespace EmployeesDIR
         private void deleteButton_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedIndex != -1)
-                if (MessageBox.Show(General.trans.tr("Really want to delete: ") + General.employees[listBox1.SelectedIndex].GetInfo()[0], General.title, MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(
+                        General.trans.tr("Really want to delete: ") +
+                        General.employees[listBox1.SelectedIndex].GetInfo()[0], General.title,
+                        MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
                     General.employees.RemoveAt(listBox1.SelectedIndex);
+                    General.logger.InfoFormat("Employee deleted.{0}", General.employees[listBox1.SelectedIndex].GetInfo()[0]);
+                }
             Flush_Window();
         }
 
@@ -350,6 +361,13 @@ namespace EmployeesDIR
             listBox1_SelectedIndexChanged(sender, e);
             Flush_Window();
             editButton.Focus();
+        }
+
+        private void loginWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           // throw new System.NotImplementedException();
+           DBConnectForm loginform = new DBConnectForm();
+           loginform.Show();
         }
     }
 }

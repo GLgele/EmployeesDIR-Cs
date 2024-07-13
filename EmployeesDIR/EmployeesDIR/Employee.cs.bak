@@ -38,9 +38,14 @@ namespace EmployeesDIR
             this.salary = salary;
         }
         [Obsolete] public int GetId() { return id; }
-        public List<string> GetInfo() { List<string> lst = new List<string> { name, sex, number, comment, email, edu, salary }; return lst; }
-        public void ChangeInfo(string name, string sex, string number, string comment, string email, string edu, string salary)
-        { this.name = name; this.sex = sex; this.number = number; this.comment = comment; this.email = email; this.edu = edu; this.salary = salary; }
+        public List<string> GetInfo() { var lst = new List<string> { name, sex, number, comment, email, edu, salary }; return lst; }
+
+        public void ChangeInfo(string _name, string _sex, string _number, string _comment, string _email, string _edu, string _salary)
+        {
+            General.logger.InfoFormat("Employee info changed. Now: {0},{1},{2},{3},{4},{5},{6}", _name, _sex, _number, _comment, _email, _edu, _salary);
+            General.logger.InfoFormat("Former: {0},{1},{2},{3},{4},{5},{6}", name, sex, number, comment, email, edu, salary);
+            name = _name; sex = _sex; number = _number; comment = _comment; email = _email; edu = _edu; salary = _salary;
+        }
         public void ChangeInfo(List<string> lst) { ChangeInfo(lst[0], lst[1], lst[2], lst[3], lst[4], lst[5], lst[6]); }
     }
 
@@ -55,7 +60,7 @@ namespace EmployeesDIR
         public static readonly Version cver = new Version(Convert.ToInt32(scver[0]), Convert.ToInt32(scver[1]), Convert.ToInt32(scver[2]));
         public static readonly string title = $"EmployeesDIR - {cver.Major}.{cver.Minor}";
         public static readonly Mylog.Mylog logger = new Mylog.Mylog() /*LogManager.GetLogger(typeof(Program))*/;
-        public static string iniFilePath = "config.ini";
+        public static readonly string iniFilePath = "config.ini";
         public static AppConfig config = AppConfig.Get();
         public static List<Employee> employees = new List<Employee>();
         public static Trans trans = new Trans();
@@ -68,7 +73,7 @@ namespace EmployeesDIR
             // http://t.zoukankan.com/yanglang-p-7151321.html
             //初始化一个OpenFileDialog类
             SaveFileDialog fileDialog = new SaveFileDialog();
-            fileDialog.Filter = "Employees(*.employees)|*.employees|All files(*.*)|*.*";
+            fileDialog.Filter = @"Employees(*.employees)|*.employees|All files(*.*)|*.*";
             //fileDialog.CheckFileExists = false;
             //判断用户是否正确的选择了文件
             if (fileDialog.ShowDialog() == DialogResult.OK)
@@ -106,21 +111,52 @@ namespace EmployeesDIR
                 error.Show();
             }
         }
-        public static void OpenData()
+
+        public static string OpenFile()
         {
             // http://t.zoukankan.com/yanglang-p-7151321.html
             //初始化一个OpenFileDialog类
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "Employees(*.employees)|*.employees|All files(*.*)|*.*";
+            //fileDialog.Filter = "Employees(*.employees)|*.employees|All files(*.*)|*.*";
             //fileDialog.CheckFileExists = false;
             //判断用户是否正确的选择了文件
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 //在这里就可以写获取到正确文件后的代码了
                 var path = fileDialog.FileName;
-                General.logger.DebugFormat("OpenFileDialog path:{0}", path);
-                OpenData(path);
+                return path;
             }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static string OpenFile(string fliter)
+        {
+            // http://t.zoukankan.com/yanglang-p-7151321.html
+            //初始化一个OpenFileDialog类
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = fliter;
+            //fileDialog.CheckFileExists = false;
+            //判断用户是否正确的选择了文件
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //在这里就可以写获取到正确文件后的代码了
+                var path = fileDialog.FileName;
+                return path;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static void OpenData()
+        {
+            string path = OpenFile("Employees(*.employees)|*.employees|All files(*.*)|*.*");
+            General.logger.DebugFormat("OpenFileDialog path:{0}", path);
+            OpenData(path);
         }
         public static void OpenData(string path)
         {
@@ -149,6 +185,7 @@ namespace EmployeesDIR
                         chr = '\0';
                     }
                     AppendEmployee(lst);
+                    //file.ReadBytes(2);
                 }
                 file.Close();
             }
@@ -167,7 +204,7 @@ namespace EmployeesDIR
         /// <param name="field">项⽬名称(如 [TypeName] )</param> 
         /// <param name="Key">键</param> 
         /// <param name="Value">值</param> 
-        public static void IniWriteVaule(string iniFilePath, string field, string Key, string Value)
+        public static void IniWriteValue(string iniFilePath, string field, string Key, string Value)
         {
             WritePrivateProfileString(field, Key, Value, iniFilePath);
         }

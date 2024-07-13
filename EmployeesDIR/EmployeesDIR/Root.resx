@@ -122,74 +122,104 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="saveItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>138, 24</value>
   </data>
   <data name="saveItem.Text" xml:space="preserve">
     <value>Save</value>
   </data>
   <data name="openItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>138, 24</value>
   </data>
   <data name="openItem.Text" xml:space="preserve">
     <value>Open</value>
   </data>
-  <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+  <data name="settingsItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 24</value>
   </data>
-  <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
+  <data name="settingsItem.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="exitItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>138, 24</value>
   </data>
   <data name="exitItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
   <data name="fileMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 21</value>
+    <value>46, 24</value>
   </data>
   <data name="fileMenu.Text" xml:space="preserve">
     <value>File</value>
   </data>
   <data name="newEmployeeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+    <value>202, 24</value>
   </data>
   <data name="newEmployeeToolStripMenuItem.Text" xml:space="preserve">
     <value>New Employee</value>
   </data>
-  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+  <data name="editInfoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 24</value>
   </data>
-  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+  <data name="editInfoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit Info</value>
+  </data>
+  <data name="deleteEmployeeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 24</value>
+  </data>
+  <data name="deleteEmployeeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete Employee</value>
+  </data>
+  <data name="opsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 24</value>
+  </data>
+  <data name="opsToolStripMenuItem.Text" xml:space="preserve">
     <value>Operations</value>
   </data>
   <data name="aboutItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 22</value>
+    <value>124, 24</value>
   </data>
   <data name="aboutItem.Text" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="testToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 22</value>
-  </data>
-  <data name="testToolStripMenuItem.Text" xml:space="preserve">
-    <value>Test</value>
-  </data>
   <data name="helpMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 21</value>
+    <value>56, 24</value>
   </data>
   <data name="helpMenu.Text" xml:space="preserve">
     <value>Help</value>
+  </data>
+  <data name="testDebugToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 24</value>
+  </data>
+  <data name="testDebugToolStripMenuItem.Text" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="errorFormDebugToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 24</value>
+  </data>
+  <data name="errorFormDebugToolStripMenuItem.Text" xml:space="preserve">
+    <value>ErrorForm</value>
+  </data>
+  <data name="DBConnectFormDebugToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 24</value>
+  </data>
+  <data name="DBConnectFormDebugToolStripMenuItem.Text" xml:space="preserve">
+    <value>DBConnectForm</value>
+  </data>
+  <data name="debugToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 24</value>
+  </data>
+  <data name="debugToolStripMenuItem.Text" xml:space="preserve">
+    <value>Debug</value>
   </data>
   <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 2, 0, 2</value>
+    <value>5, 2, 0, 2</value>
   </data>
   <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 25</value>
+    <value>621, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
@@ -208,16 +238,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>20</value>
   </data>
   <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 28</value>
+    <value>13, 48</value>
+  </data>
+  <data name="listBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 328</value>
+    <value>159, 364</value>
   </data>
   <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -232,46 +265,514 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>19</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 333</value>
+  <data name="editButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 382</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="editButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="editButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="editButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Choose</value>
+  <data name="editButton.Text" xml:space="preserve">
+    <value>Edit</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;editButton.Name" xml:space="preserve">
+    <value>editButton</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;editButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;editButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;editButton.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="nameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 50</value>
+  </data>
+  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 15</value>
+  </data>
+  <data name="nameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="nameLabel.Text" xml:space="preserve">
+    <value>name</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.Name" xml:space="preserve">
+    <value>nameLabel</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nameLabel.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="sexLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="sexLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 80</value>
+  </data>
+  <data name="sexLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="sexLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="sexLabel.Text" xml:space="preserve">
+    <value>sex</value>
+  </data>
+  <data name="&gt;&gt;sexLabel.Name" xml:space="preserve">
+    <value>sexLabel</value>
+  </data>
+  <data name="&gt;&gt;sexLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sexLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;sexLabel.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="numberLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="numberLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 110</value>
+  </data>
+  <data name="numberLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="numberLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="numberLabel.Text" xml:space="preserve">
+    <value>number</value>
+  </data>
+  <data name="&gt;&gt;numberLabel.Name" xml:space="preserve">
+    <value>numberLabel</value>
+  </data>
+  <data name="&gt;&gt;numberLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numberLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;numberLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="commentLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="commentLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 140</value>
+  </data>
+  <data name="commentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 15</value>
+  </data>
+  <data name="commentLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="commentLabel.Text" xml:space="preserve">
+    <value>comment</value>
+  </data>
+  <data name="&gt;&gt;commentLabel.Name" xml:space="preserve">
+    <value>commentLabel</value>
+  </data>
+  <data name="&gt;&gt;commentLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;commentLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;commentLabel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="emailLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="emailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 170</value>
+  </data>
+  <data name="emailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 15</value>
+  </data>
+  <data name="emailLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="emailLabel.Text" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="&gt;&gt;emailLabel.Name" xml:space="preserve">
+    <value>emailLabel</value>
+  </data>
+  <data name="&gt;&gt;emailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;emailLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;emailLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="eduLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="eduLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 200</value>
+  </data>
+  <data name="eduLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 15</value>
+  </data>
+  <data name="eduLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="eduLabel.Text" xml:space="preserve">
+    <value>edu</value>
+  </data>
+  <data name="&gt;&gt;eduLabel.Name" xml:space="preserve">
+    <value>eduLabel</value>
+  </data>
+  <data name="&gt;&gt;eduLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;eduLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;eduLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="salaryLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="salaryLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 230</value>
+  </data>
+  <data name="salaryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 15</value>
+  </data>
+  <data name="salaryLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="salaryLabel.Text" xml:space="preserve">
+    <value>salary</value>
+  </data>
+  <data name="&gt;&gt;salaryLabel.Name" xml:space="preserve">
+    <value>salaryLabel</value>
+  </data>
+  <data name="&gt;&gt;salaryLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;salaryLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;salaryLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 48</value>
+  </data>
+  <data name="textBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 78</value>
+  </data>
+  <data name="textBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
+    <value>textBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 108</value>
+  </data>
+  <data name="textBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
+    <value>textBox3</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 138</value>
+  </data>
+  <data name="textBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="textBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Name" xml:space="preserve">
+    <value>textBox4</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 168</value>
+  </data>
+  <data name="textBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="textBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
+    <value>textBox5</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="textBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 198</value>
+  </data>
+  <data name="textBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="textBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="textBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;textBox6.Name" xml:space="preserve">
+    <value>textBox6</value>
+  </data>
+  <data name="&gt;&gt;textBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 228</value>
+  </data>
+  <data name="textBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="textBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="textBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Name" xml:space="preserve">
+    <value>textBox7</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="confirmButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 345</value>
+  </data>
+  <data name="confirmButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="confirmButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="confirmButton.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="confirmButton.Text" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="&gt;&gt;confirmButton.Name" xml:space="preserve">
+    <value>confirmButton</value>
+  </data>
+  <data name="&gt;&gt;confirmButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;confirmButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;confirmButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="deleteButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 382</value>
+  </data>
+  <data name="deleteButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="deleteButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="deleteButton.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="deleteButton.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;deleteButton.Name" xml:space="preserve">
+    <value>deleteButton</value>
+  </data>
+  <data name="&gt;&gt;deleteButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;deleteButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="newEButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 382</value>
+  </data>
+  <data name="newEButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="newEButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="newEButton.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="newEButton.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="&gt;&gt;newEButton.Name" xml:space="preserve">
+    <value>newEButton</value>
+  </data>
+  <data name="&gt;&gt;newEButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newEButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;newEButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 345</value>
+  </data>
+  <data name="cancelButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="cancelButton.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Name" xml:space="preserve">
+    <value>cancelButton</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+    <value>8, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 360</value>
+    <value>621, 432</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>EmployeesDIR - 3.0</value>
+    <value>EmployeesDIR - 3.2</value>
   </data>
   <data name="&gt;&gt;fileMenu.Name" xml:space="preserve">
     <value>fileMenu</value>
@@ -291,10 +792,10 @@
   <data name="&gt;&gt;openItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;settingsToolStripMenuItem.Name" xml:space="preserve">
-    <value>settingsToolStripMenuItem</value>
+  <data name="&gt;&gt;settingsItem.Name" xml:space="preserve">
+    <value>settingsItem</value>
   </data>
-  <data name="&gt;&gt;settingsToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;settingsItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;exitItem.Name" xml:space="preserve">
@@ -303,16 +804,28 @@
   <data name="&gt;&gt;exitItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;viewToolStripMenuItem.Name" xml:space="preserve">
-    <value>viewToolStripMenuItem</value>
+  <data name="&gt;&gt;opsToolStripMenuItem.Name" xml:space="preserve">
+    <value>opsToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;viewToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;opsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;newEmployeeToolStripMenuItem.Name" xml:space="preserve">
     <value>newEmployeeToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;newEmployeeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editInfoToolStripMenuItem.Name" xml:space="preserve">
+    <value>editInfoToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;editInfoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteEmployeeToolStripMenuItem.Name" xml:space="preserve">
+    <value>deleteEmployeeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deleteEmployeeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;helpMenu.Name" xml:space="preserve">
@@ -327,10 +840,28 @@
   <data name="&gt;&gt;aboutItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;testToolStripMenuItem.Name" xml:space="preserve">
-    <value>testToolStripMenuItem</value>
+  <data name="&gt;&gt;debugToolStripMenuItem.Name" xml:space="preserve">
+    <value>debugToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;testToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;debugToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;testDebugToolStripMenuItem.Name" xml:space="preserve">
+    <value>testDebugToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;testDebugToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorFormDebugToolStripMenuItem.Name" xml:space="preserve">
+    <value>errorFormDebugToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;errorFormDebugToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DBConnectFormDebugToolStripMenuItem.Name" xml:space="preserve">
+    <value>DBConnectFormDebugToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;DBConnectFormDebugToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

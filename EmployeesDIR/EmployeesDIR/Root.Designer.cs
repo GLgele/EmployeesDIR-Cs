@@ -24,11 +24,12 @@ namespace EmployeesDIR
         #region Windows 窗体设计器生成的代码
 
         /// <summary>
-        /// 设计器支持所需的方法 - 不要修改
-        /// 使用代码编辑器修改此方法的内容。
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeesDIR));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.saveItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +45,7 @@ namespace EmployeesDIR
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.errorFormDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DBConnectFormDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.editButton = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
@@ -70,335 +72,235 @@ namespace EmployeesDIR
             // menuStrip
             // 
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileMenu,
-            this.opsToolStripMenuItem,
-            this.helpMenu,
-            this.debugToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.fileMenu, this.opsToolStripMenuItem, this.helpMenu, this.debugToolStripMenuItem });
+            resources.ApplyResources(this.menuStrip, "menuStrip");
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(466, 25);
-            this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "menuStrip2";
             // 
             // fileMenu
             // 
-            this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveItem,
-            this.openItem,
-            this.settingsItem,
-            this.exitItem});
+            this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.saveItem, this.openItem, this.settingsItem, this.exitItem });
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(39, 21);
-            this.fileMenu.Text = "File";
+            resources.ApplyResources(this.fileMenu, "fileMenu");
             // 
             // saveItem
             // 
             this.saveItem.Name = "saveItem";
-            this.saveItem.Size = new System.Drawing.Size(122, 22);
-            this.saveItem.Text = "Save";
+            resources.ApplyResources(this.saveItem, "saveItem");
             this.saveItem.Click += new System.EventHandler(this.saveItem_Click);
             // 
             // openItem
             // 
             this.openItem.Name = "openItem";
-            this.openItem.Size = new System.Drawing.Size(122, 22);
-            this.openItem.Text = "Open";
+            resources.ApplyResources(this.openItem, "openItem");
             this.openItem.Click += new System.EventHandler(this.openItem_Click);
             // 
             // settingsItem
             // 
             this.settingsItem.Name = "settingsItem";
-            this.settingsItem.Size = new System.Drawing.Size(122, 22);
-            this.settingsItem.Text = "Settings";
+            resources.ApplyResources(this.settingsItem, "settingsItem");
             this.settingsItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // exitItem
             // 
             this.exitItem.Name = "exitItem";
-            this.exitItem.Size = new System.Drawing.Size(122, 22);
-            this.exitItem.Text = "Exit";
+            resources.ApplyResources(this.exitItem, "exitItem");
             this.exitItem.Click += new System.EventHandler(this.exitItem_Click);
             // 
             // opsToolStripMenuItem
             // 
-            this.opsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newEmployeeToolStripMenuItem,
-            this.editInfoToolStripMenuItem,
-            this.deleteEmployeeToolStripMenuItem});
+            this.opsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.newEmployeeToolStripMenuItem, this.editInfoToolStripMenuItem, this.deleteEmployeeToolStripMenuItem });
             this.opsToolStripMenuItem.Name = "opsToolStripMenuItem";
-            this.opsToolStripMenuItem.Size = new System.Drawing.Size(85, 21);
-            this.opsToolStripMenuItem.Text = "Operations";
+            resources.ApplyResources(this.opsToolStripMenuItem, "opsToolStripMenuItem");
             this.opsToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // newEmployeeToolStripMenuItem
             // 
             this.newEmployeeToolStripMenuItem.Name = "newEmployeeToolStripMenuItem";
-            this.newEmployeeToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.newEmployeeToolStripMenuItem.Text = "New Employee";
+            resources.ApplyResources(this.newEmployeeToolStripMenuItem, "newEmployeeToolStripMenuItem");
             this.newEmployeeToolStripMenuItem.Click += new System.EventHandler(this.newEmployeeToolStripMenuItem_Click);
             // 
             // editInfoToolStripMenuItem
             // 
             this.editInfoToolStripMenuItem.Name = "editInfoToolStripMenuItem";
-            this.editInfoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.editInfoToolStripMenuItem.Text = "Edit Info";
+            resources.ApplyResources(this.editInfoToolStripMenuItem, "editInfoToolStripMenuItem");
             this.editInfoToolStripMenuItem.Click += new System.EventHandler(this.editInfoToolStripMenuItem_Click);
             // 
             // deleteEmployeeToolStripMenuItem
             // 
             this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
+            resources.ApplyResources(this.deleteEmployeeToolStripMenuItem, "deleteEmployeeToolStripMenuItem");
             this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
             // helpMenu
             // 
-            this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutItem});
+            this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.aboutItem });
             this.helpMenu.Name = "helpMenu";
-            this.helpMenu.Size = new System.Drawing.Size(47, 21);
-            this.helpMenu.Text = "Help";
+            resources.ApplyResources(this.helpMenu, "helpMenu");
             this.helpMenu.Click += new System.EventHandler(this.helpMenu_Click);
             // 
             // aboutItem
             // 
             this.aboutItem.Name = "aboutItem";
-            this.aboutItem.Size = new System.Drawing.Size(111, 22);
-            this.aboutItem.Text = "About";
+            resources.ApplyResources(this.aboutItem, "aboutItem");
             this.aboutItem.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // debugToolStripMenuItem
             // 
-            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testDebugToolStripMenuItem,
-            this.errorFormDebugToolStripMenuItem});
+            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.testDebugToolStripMenuItem, this.errorFormDebugToolStripMenuItem, this.DBConnectFormDebugToolStripMenuItem });
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
-            this.debugToolStripMenuItem.Text = "Debug";
+            resources.ApplyResources(this.debugToolStripMenuItem, "debugToolStripMenuItem");
             this.debugToolStripMenuItem.Click += new System.EventHandler(this.debugToolStripMenuItem_Click);
             // 
             // testDebugToolStripMenuItem
             // 
             this.testDebugToolStripMenuItem.Name = "testDebugToolStripMenuItem";
-            this.testDebugToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.testDebugToolStripMenuItem.Text = "Test";
+            resources.ApplyResources(this.testDebugToolStripMenuItem, "testDebugToolStripMenuItem");
             this.testDebugToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click_1);
             // 
             // errorFormDebugToolStripMenuItem
             // 
             this.errorFormDebugToolStripMenuItem.Name = "errorFormDebugToolStripMenuItem";
-            this.errorFormDebugToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.errorFormDebugToolStripMenuItem.Text = "ErrorForm";
+            resources.ApplyResources(this.errorFormDebugToolStripMenuItem, "errorFormDebugToolStripMenuItem");
             this.errorFormDebugToolStripMenuItem.Click += new System.EventHandler(this.errorFormToolStripMenuItem_Click);
+            // 
+            // DBConnectFormDebugToolStripMenuItem
+            // 
+            this.DBConnectFormDebugToolStripMenuItem.Name = "DBConnectFormDebugToolStripMenuItem";
+            resources.ApplyResources(this.DBConnectFormDebugToolStripMenuItem, "DBConnectFormDebugToolStripMenuItem");
+            this.DBConnectFormDebugToolStripMenuItem.Tag = "";
+            this.DBConnectFormDebugToolStripMenuItem.Click += new System.EventHandler(this.loginWindowToolStripMenuItem_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(10, 38);
+            resources.ApplyResources(this.listBox1, "listBox1");
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 292);
-            this.listBox1.TabIndex = 1;
             this.listBox1.Tag = "DNT";
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(135, 306);
+            resources.ApplyResources(this.editButton, "editButton");
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(75, 23);
-            this.editButton.TabIndex = 2;
-            this.editButton.Text = "Edit";
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // nameLabel
             // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(169, 40);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            resources.ApplyResources(this.nameLabel, "nameLabel");
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(29, 12);
-            this.nameLabel.TabIndex = 3;
             this.nameLabel.Tag = "DNT";
-            this.nameLabel.Text = "name";
             // 
             // sexLabel
             // 
-            this.sexLabel.AutoSize = true;
-            this.sexLabel.Location = new System.Drawing.Point(169, 64);
-            this.sexLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            resources.ApplyResources(this.sexLabel, "sexLabel");
             this.sexLabel.Name = "sexLabel";
-            this.sexLabel.Size = new System.Drawing.Size(23, 12);
-            this.sexLabel.TabIndex = 4;
             this.sexLabel.Tag = "DNT";
-            this.sexLabel.Text = "sex";
             // 
             // numberLabel
             // 
-            this.numberLabel.AutoSize = true;
-            this.numberLabel.Location = new System.Drawing.Point(169, 88);
-            this.numberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            resources.ApplyResources(this.numberLabel, "numberLabel");
             this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(41, 12);
-            this.numberLabel.TabIndex = 5;
             this.numberLabel.Tag = "DNT";
-            this.numberLabel.Text = "number";
             // 
             // commentLabel
             // 
-            this.commentLabel.AutoSize = true;
-            this.commentLabel.Location = new System.Drawing.Point(169, 112);
-            this.commentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            resources.ApplyResources(this.commentLabel, "commentLabel");
             this.commentLabel.Name = "commentLabel";
-            this.commentLabel.Size = new System.Drawing.Size(47, 12);
-            this.commentLabel.TabIndex = 6;
             this.commentLabel.Tag = "DNT";
-            this.commentLabel.Text = "comment";
             // 
             // emailLabel
             // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(169, 136);
-            this.emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            resources.ApplyResources(this.emailLabel, "emailLabel");
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(35, 12);
-            this.emailLabel.TabIndex = 7;
             this.emailLabel.Tag = "DNT";
-            this.emailLabel.Text = "email";
             // 
             // eduLabel
             // 
-            this.eduLabel.AutoSize = true;
-            this.eduLabel.Location = new System.Drawing.Point(169, 160);
-            this.eduLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            resources.ApplyResources(this.eduLabel, "eduLabel");
             this.eduLabel.Name = "eduLabel";
-            this.eduLabel.Size = new System.Drawing.Size(23, 12);
-            this.eduLabel.TabIndex = 8;
             this.eduLabel.Tag = "DNT";
-            this.eduLabel.Text = "edu";
             // 
             // salaryLabel
             // 
-            this.salaryLabel.AutoSize = true;
-            this.salaryLabel.Location = new System.Drawing.Point(169, 184);
-            this.salaryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            resources.ApplyResources(this.salaryLabel, "salaryLabel");
             this.salaryLabel.Name = "salaryLabel";
-            this.salaryLabel.Size = new System.Drawing.Size(41, 12);
-            this.salaryLabel.TabIndex = 9;
             this.salaryLabel.Tag = "DNT";
-            this.salaryLabel.Text = "salary";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(248, 38);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 21);
-            this.textBox1.TabIndex = 10;
             this.textBox1.Tag = "DNT";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(248, 62);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(76, 21);
-            this.textBox2.TabIndex = 11;
             this.textBox2.Tag = "DNT";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(248, 86);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.textBox3, "textBox3");
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(76, 21);
-            this.textBox3.TabIndex = 12;
             this.textBox3.Tag = "DNT";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(248, 110);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.textBox4, "textBox4");
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(76, 21);
-            this.textBox4.TabIndex = 13;
             this.textBox4.Tag = "DNT";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(248, 134);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.textBox5, "textBox5");
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(76, 21);
-            this.textBox5.TabIndex = 14;
             this.textBox5.Tag = "DNT";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(248, 158);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.textBox6, "textBox6");
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(76, 21);
-            this.textBox6.TabIndex = 15;
             this.textBox6.Tag = "DNT";
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(248, 182);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.textBox7, "textBox7");
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(76, 21);
-            this.textBox7.TabIndex = 16;
             this.textBox7.Tag = "DNT";
             // 
             // confirmButton
             // 
-            this.confirmButton.Location = new System.Drawing.Point(216, 276);
+            resources.ApplyResources(this.confirmButton, "confirmButton");
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(75, 23);
-            this.confirmButton.TabIndex = 17;
-            this.confirmButton.Text = "Confirm";
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(297, 306);
+            resources.ApplyResources(this.deleteButton, "deleteButton");
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(75, 23);
-            this.deleteButton.TabIndex = 18;
-            this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // newEButton
             // 
-            this.newEButton.Location = new System.Drawing.Point(216, 306);
+            resources.ApplyResources(this.newEButton, "newEButton");
             this.newEButton.Name = "newEButton";
-            this.newEButton.Size = new System.Drawing.Size(75, 23);
-            this.newEButton.TabIndex = 19;
-            this.newEButton.Text = "New";
             this.newEButton.UseVisualStyleBackColor = true;
             this.newEButton.Click += new System.EventHandler(this.NewEButton_Click);
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(297, 276);
+            resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 20;
-            this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // EmployeesDIR
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 346);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.newEButton);
             this.Controls.Add(this.deleteButton);
@@ -422,16 +324,15 @@ namespace EmployeesDIR
             this.Controls.Add(this.menuStrip);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EmployeesDIR";
-            this.Text = "EmployeesDIR - 3.2";
             this.Load += new System.EventHandler(this.EmployeesDIR_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.ToolStripMenuItem DBConnectFormDebugToolStripMenuItem;
 
         #endregion
 
