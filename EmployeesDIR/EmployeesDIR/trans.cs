@@ -15,12 +15,15 @@ namespace EmployeesDIR
     /// </summary>
     class Trans
     {
-        public static readonly Dictionary<string, string> langDict = new Dictionary<string, string>() { { "中文（简体）", "zh_cn" }, { "English", "en_us" } };
+        public static readonly Dictionary<string, string> langDict = new Dictionary<string, string>()
+            { { "中文（简体）", "zh_cn" }, { "English", "en_us" } };
+
         public static readonly Dictionary<string, string> langDict2 = langDict.ToDictionary(k => k.Value, p => p.Key);
         private static string lang;
         private string source;
         private StreamReader file;
         private Dictionary<string, string> dict = new Dictionary<string, string>();
+
         public Trans()
         {
             lang = Config.config.Language.lang;
@@ -40,11 +43,14 @@ namespace EmployeesDIR
                 Program.logger.Fatal("Can't load language file!");
                 ErrorForm form = new ErrorForm("Can't load language file!");
             }
+
             source = file.ReadToEnd();
             file.Close();
             source = source.Replace("\r", "").Replace("\n", "").Replace("\t", "");
             //source = file.ToString();
+
             #region Obsolete deserialize json function
+
             /*
             JsonTextReader reader = new JsonTextReader(new StringReader(source));
             string tmp1 = "";
@@ -72,13 +78,17 @@ namespace EmployeesDIR
                 }
             }
             */
+
             #endregion
+
             dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(source);
         }
+
         ~Trans()
         {
             file.Dispose();
         }
+
         public string tr(string s)
         {
             //List<string> except = new List<string> { "debug", "namelabel", "sexlabel", "numberlabel", "commentlabel", "emaillabel", "edulabel", "salarylabel" };
@@ -95,22 +105,13 @@ namespace EmployeesDIR
                     return "";
                 }
             }
+
             return "";
         }
+
         public void Init(Form form)
         {
-            foreach (Control control in form.Controls)
-            {
-                if(!(control.Tag is null)) { if (control.Tag.ToString().Contains("DNT")) continue; }
-                else
-                {
-                    string tmp = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
-                    if (tmp != "")
-                    {
-                        control.Text = tmp;
-                    }
-                }
-            }
+            Init(form, form.Controls);
             if (form is EmployeesDIR)
             {
                 foreach (ToolStripMenuItem menuItem in form.MainMenuStrip.Items)
@@ -123,10 +124,37 @@ namespace EmployeesDIR
                             item.Text = tmps;
                         }
                     }
+
                     string tmp = tr("Form.Item".Replace("Form", form.Name).Replace("Item", menuItem.Name));
                     if (tmp != "")
                     {
                         menuItem.Text = tmp;
+                    }
+                }
+            }
+
+            if (form is DBConnectForm)
+                foreach (Control control in form.Controls)
+                    if (control.Controls.Count > 0)
+                        foreach (Control c in control.Controls)
+                            if (c is TabPage)
+                                Init(form, c.Controls);
+        }
+
+        public void Init(Form form, Control.ControlCollection collection)
+        {
+            foreach (Control control in collection)
+            {
+                if (!(control.Tag is null))
+                {
+                    if (control.Tag.ToString().Contains("DNT")) continue;
+                }
+                else
+                {
+                    string tmp = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
+                    if (tmp != "")
+                    {
+                        control.Text = tmp;
                     }
                 }
             }

@@ -21,12 +21,20 @@ namespace EmployeesDIR
         public string source { get; set; }
         public bool autoCheck { get; set; }
     }
+
+    public class Database
+    {
+        public string dbType { get; set; }
+        public string connection { get; set; }
+        
+    }
     class AppConfig
     {
         static AppConfig Instance;
 
         public Language Language { get; set; }
         public Update Update { get; set; }
+        public Database Database { get; set; }
 
         public AppConfig() { }
         public static AppConfig Get()

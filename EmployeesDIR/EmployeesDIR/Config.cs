@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -42,6 +43,21 @@ namespace EmployeesDIR
         public static void CheckUpdate(object sender, EventArgs e)
         {
             CheckUpdate(true);
+        }
+        
+        public static void SaveConfig()
+        {
+            StreamWriter sw = new StreamWriter("config.ini");
+            sw.WriteLine("[Language]");
+            sw.Write("lang="); sw.WriteLine(config.Language.lang);
+            sw.WriteLine("[Update]");
+            sw.Write("source="); sw.WriteLine(config.Update.source);
+            sw.Write("autoCheck="); sw.WriteLine(config.Update.autoCheck);
+            sw.WriteLine("[Database]");
+            sw.Write("dbType=");sw.WriteLine(config.Database.dbType);
+            sw.Write("connection=");sw.WriteLine(config.Database.connection);
+            sw.Close();
+            
         }
     }
 }

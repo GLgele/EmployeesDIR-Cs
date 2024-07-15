@@ -55,7 +55,7 @@ namespace EmployeesDIR
             // http://t.zoukankan.com/yanglang-p-7151321.html
             //初始化一个OpenFileDialog类
             SaveFileDialog fileDialog = new SaveFileDialog();
-            fileDialog.Filter = "Employees(*.employees)|*.employees|All files(*.*)|*.*";
+            fileDialog.Filter = @"Employees(*.employees)|*.employees|All files(*.*)|*.*";
             //fileDialog.CheckFileExists = false;
             //判断用户是否正确的选择了文件
             if (fileDialog.ShowDialog() == DialogResult.OK)
@@ -94,13 +94,13 @@ namespace EmployeesDIR
                 error.Show();
             }
         }
-
+        
         public static void OpenData()
         {
             // http://t.zoukankan.com/yanglang-p-7151321.html
             //初始化一个OpenFileDialog类
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "Employees(*.employees)|*.employees|All files(*.*)|*.*";
+            fileDialog.Filter = @"Employees(*.employees)|*.employees|All files(*.*)|*.*";
             //fileDialog.CheckFileExists = false;
             //判断用户是否正确的选择了文件
             if (fileDialog.ShowDialog() == DialogResult.OK)

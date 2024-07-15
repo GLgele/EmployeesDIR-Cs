@@ -135,7 +135,7 @@ namespace EmployeesDIR
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"EmployeesDIR\nVersion {Config.cver.Major}.{Config.cver.Minor}.{Config.cver.Build}\nCopyright GLgele (c) 2022",Config.title);
+            MessageBox.Show($"EmployeesDIR\nVersion {Config.cver.Major}.{Config.cver.Minor}.{Config.cver.Build}\nCopyright GLgele (c) 2024",Config.title);
             //Form errorform = new ErrorForm("aaa");
             //errorform.Show();
         }
