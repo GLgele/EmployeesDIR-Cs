@@ -13,7 +13,7 @@ namespace EmployeesDIR
     /// <summary>
     /// 不再使用 改为winform多语言
     /// </summary>
-    class Trans : General
+    class Trans
     {
         public static readonly Dictionary<string, string> langDict = new Dictionary<string, string>() { { "中文（简体）", "zh_cn" }, { "English", "en_us" } };
         public static readonly Dictionary<string, string> langDict2 = langDict.ToDictionary(k => k.Value, p => p.Key);
@@ -23,9 +23,9 @@ namespace EmployeesDIR
         private Dictionary<string, string> dict = new Dictionary<string, string>();
         public Trans()
         {
-            lang = config.Language.lang;
+            lang = Config.config.Language.lang;
             //lang = langDict[lang];
-            logger.DebugFormat("Language:{0}", langDict2[lang]);
+            Program.logger.DebugFormat("Language:{0}", langDict2[lang]);
             try
             {
                 file = new StreamReader(new FileStream("lang/" + lang + ".json", FileMode.Open, FileAccess.Read, FileShare.Read));
@@ -33,11 +33,11 @@ namespace EmployeesDIR
             catch (IOException)
             {
                 file = new StreamReader(new FileStream("lang/en_us.json", FileMode.Open, FileAccess.Read, FileShare.Read));
-                General.logger.Error("Can't find settings.ini!");
+                Program.logger.Error("Can't find settings.ini!");
             }
             catch (Exception)
             {
-                General.logger.Fatal("Can't load language file!");
+                Program.logger.Fatal("Can't load language file!");
                 ErrorForm form = new ErrorForm("Can't load language file!");
             }
             source = file.ReadToEnd();
@@ -90,7 +90,7 @@ namespace EmployeesDIR
                 }
                 catch (Exception)
                 {
-                    General.logger.WarnFormat("Translate string not found! Source:({0})", s);
+                    Program.logger.WarnFormat("Translate string not found! Source:({0})", s);
                     if (!s.Contains(".")) return s;
                     return "";
                 }

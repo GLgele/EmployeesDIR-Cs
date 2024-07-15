@@ -49,7 +49,7 @@ namespace EmployeesDIR
 
         private void button1_Click(object sender, EventArgs e)
         {
-            General.logger.Debug("Closing form \"Error Form\".");
+            Program.logger.Debug("Closing form \"Error Form\".");
             this.Close();
             this.Dispose();
         }
@@ -57,14 +57,14 @@ namespace EmployeesDIR
         private void copyButton_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(errorLabel.Text);
-            General.logger.InfoFormat("Set clipborad text: {0}",errorLabel.Text);
-            MessageBox.Show("Message copied.", General.title, MessageBoxButtons.OK);
+            Program.logger.InfoFormat("Set clipborad text: {0}",errorLabel.Text);
+            MessageBox.Show("Message copied.", Config.title, MessageBoxButtons.OK);
         }
 
         private void ErrorForm_Load(object sender, EventArgs e)
         {
-            General.logger.DebugFormat("Error Form loaded.Args: {0}",errmsg);
-            General.trans.Init(this);
+            Program.logger.DebugFormat("Error Form loaded.Args: {0}",errmsg);
+            Program.trans.Init(this);
             if (errmsg != "")
             {
                 errorLabel.Text = errmsg;
@@ -90,7 +90,7 @@ namespace EmployeesDIR
             start.RedirectStandardInput = true;//
             start.UseShellExecute = false;//是否指定操作系统外壳进程启动程序
             Process p = Process.Start(start);
-            General.logger.DebugFormat("Process explorer.exe starting with args {0}.", DateTime.Now.ToString("yyyyMMdd"));
+            Program.logger.DebugFormat("Process explorer.exe starting with args {0}.", DateTime.Now.ToString("yyyyMMdd"));
             StreamReader reader = p.StandardOutput;//截取输出流
             string line = reader.ReadLine();//每次读取一行
             while (!reader.EndOfStream)

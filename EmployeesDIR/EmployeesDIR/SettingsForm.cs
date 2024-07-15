@@ -20,16 +20,16 @@ namespace EmployeesDIR
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
-            General.logger.Debug("New Settings Form.");
-            General.trans.Init(this);
-            if(General.config.Language.lang == "zh_cn")
+            Program.logger.Debug("New Settings Form.");
+            Program.trans.Init(this);
+            if(Config.config.Language.lang == "zh_cn")
             {
                 //checkUpdateButton.Location.X = 186;
                 checkUpdateButton.Location = new Point(176, 23);
             }
-            languageComboBox.SelectedItem = Trans.langDict2[General.config.Language.lang];
-            downloadComboBox.SelectedItem = General.config.Update.source;
-            checkUpdateBox.Checked = General.config.Update.autoCheck;
+            languageComboBox.SelectedItem = Trans.langDict2[Config.config.Language.lang];
+            downloadComboBox.SelectedItem = Config.config.Update.source;
+            checkUpdateBox.Checked = Config.config.Update.autoCheck;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace EmployeesDIR
 
         private void button1_Click(object sender, EventArgs e)
         {
-            General.CheckUpdate();
+            Config.CheckUpdate();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace EmployeesDIR
             StreamWriter sw = new StreamWriter("config.ini");
             sw.WriteLine("[Language]");
             sw.Write("lang=");
-            sw.WriteLine(General.config.Language.lang);
+            sw.WriteLine(Config.config.Language.lang);
             sw.WriteLine("[Update]");
             sw.Write("source=");
             sw.WriteLine(downloadComboBox.SelectedItem.ToString());
@@ -75,7 +75,7 @@ namespace EmployeesDIR
         {
             this.Close();
             this.Dispose();
-            General.logger.Debug("Settings Form closed.");
+            Program.logger.Debug("Settings Form closed.");
         }
 
         private void OKButton_Click(object sender, EventArgs e)

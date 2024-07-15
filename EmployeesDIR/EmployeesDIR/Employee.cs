@@ -44,25 +44,12 @@ namespace EmployeesDIR
         public void ChangeInfo(List<string> lst) { ChangeInfo(lst[0], lst[1], lst[2], lst[3], lst[4], lst[5], lst[6]); }
     }
 
-    class General
+    partial class Program
     {
-        [DllImport("kernel32")]
-        protected static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
-        [DllImport("kernel32")]
-        protected static extern int GetPrivateProfileString(string section, string key, string def, StringBuilder retVal, int size, string filePath);
-        public static bool isRDebug = false;
-        private static readonly string[] scver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString().Split('.');
-        public static readonly Version cver = new Version(Convert.ToInt32(scver[0]), Convert.ToInt32(scver[1]), Convert.ToInt32(scver[2]));
-        public static readonly string title = $"EmployeesDIR - {cver.Major}.{cver.Minor}";
         public static readonly Mylog.Mylog logger = new Mylog.Mylog() /*LogManager.GetLogger(typeof(Program))*/;
-        public static string iniFilePath = "config.ini";
-        public static AppConfig config = AppConfig.Get();
         public static List<Employee> employees = new List<Employee>();
         public static Trans trans = new Trans();
-        internal General()
-        {
 
-        }
         public static void SaveData()
         {
             // http://t.zoukankan.com/yanglang-p-7151321.html
@@ -75,19 +62,20 @@ namespace EmployeesDIR
             {
                 //在这里就可以写获取到正确文件后的代码了
                 var path = fileDialog.FileName;
-                General.logger.DebugFormat("SaveFileDialog path:{0}", path);
+                Program.logger.DebugFormat("SaveFileDialog path:{0}", path);
                 SaveData(path);
             }
         }
+
         public static void SaveData(string path)
         {
-            General.logger.InfoFormat("Saving file. Path: {0}", path);
+            Program.logger.InfoFormat("Saving file. Path: {0}", path);
             try
             {
                 BinaryWriter file = new BinaryWriter(new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write));
                 file.Write(employees.Count());
                 file.Write("\n");
-                foreach (Employee emp in General.employees)
+                foreach (Employee emp in Program.employees)
                 {
                     List<string> lst = emp.GetInfo();
                     foreach (string s in lst)
@@ -101,11 +89,12 @@ namespace EmployeesDIR
             }
             catch (Exception e)
             {
-                General.logger.ErrorFormat("Exception: {0}", e);
+                Program.logger.ErrorFormat("Exception: {0}", e);
                 ErrorForm error = new ErrorForm(e.Message);
                 error.Show();
             }
         }
+
         public static void OpenData()
         {
             // http://t.zoukankan.com/yanglang-p-7151321.html
@@ -118,13 +107,14 @@ namespace EmployeesDIR
             {
                 //在这里就可以写获取到正确文件后的代码了
                 var path = fileDialog.FileName;
-                General.logger.DebugFormat("OpenFileDialog path:{0}", path);
+                Program.logger.DebugFormat("OpenFileDialog path:{0}", path);
                 OpenData(path);
             }
         }
+
         public static void OpenData(string path)
         {
-            General.logger.InfoFormat("Opening file. Path: {0}", path);
+            Program.logger.InfoFormat("Opening file. Path: {0}", path);
             try
             {
                 BinaryReader file = new BinaryReader(new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read));
@@ -154,11 +144,32 @@ namespace EmployeesDIR
             }
             catch (Exception e)
             {
-                General.logger.ErrorFormat("Exception: {0}", e);
+                Program.logger.ErrorFormat("Exception: {0}", e);
                 ErrorForm error = new ErrorForm(e.Message);
                 error.Show();
             }
         }
+
+        public static void AppendEmployee(/*int id, */string name, string sex, string number, string comment, string email, string edu, string salary)
+        {
+            int id = 0;
+            employees.Add(new Employee(id, name, sex, number, comment, email, edu, salary));
+            logger.InfoFormat("New employee:{0},id{1};{2},{3},{4},{5},{6},{7}", name, id, sex, number, comment, email, edu, salary);
+        }
+
+        public static void AppendEmployee(List<string> lst)
+        {
+            AppendEmployee(lst[0], lst[1], lst[2], lst[3], lst[4], lst[5], lst[6]);
+        }
+    }
+
+    class General
+    {
+        internal General()
+        {
+
+        }
+
         /*
         /// <summary> 
         /// 写⼊INI⽂件
@@ -184,38 +195,5 @@ namespace EmployeesDIR
             return temp.ToString();
         }
         */
-        public static void AppendEmployee(/*int id, */string name, string sex, string number, string comment, string email, string edu, string salary)
-        {
-            int id = 0;
-            employees.Add(new Employee(id, name, sex, number, comment, email, edu, salary));
-            logger.InfoFormat("New employee:{0},id{1};{2},{3},{4},{5},{6},{7}", name, id, sex, number, comment, email, edu, salary);
-        }
-        public static void AppendEmployee(List<string> lst)
-        {
-            AppendEmployee(lst[0], lst[1], lst[2], lst[3], lst[4], lst[5], lst[6]);
-        }
-        public static void CheckUpdate(bool f=false)
-        {
-            switch (General.config.Update.source)
-            {
-                case "Github":
-                    {
-                        GitHubUpdater.UpdateClient client = new GitHubUpdater.UpdateClient() { Author = "GLgele", RepositoryName = "EmployeesDIR-Cs", CurrentInstalledVersion = General.cver };
-                        client.CheckIfLatest(f);
-                        break;
-                    }
-                case "Gitee":
-                    {
-                        GitHubUpdater.UpdateClient client = new GitHubUpdater.UpdateClient() { Author = "GLgele", RepositoryName = "EmployeesDIR-Cs", CurrentInstalledVersion = General.cver, BaseUrl = "https://gitee.com/api/v5/" };
-                        client.CheckIfLatest(f);
-                        break;
-                    }
-            }
-            
-        }
-        public static void CheckUpdate(object sender, EventArgs e)
-        {
-            CheckUpdate(true);
-        }
     }
 }

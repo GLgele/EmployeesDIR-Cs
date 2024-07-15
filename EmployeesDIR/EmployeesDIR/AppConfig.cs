@@ -35,7 +35,7 @@ namespace EmployeesDIR
             try
             {
                 Instance = new ConfigurationBuilder()
-                                .AddIniFile(General.iniFilePath)
+                                .AddIniFile(Config.iniFilePath)
                                 .Build()
                                 .Get<AppConfig>();
             }

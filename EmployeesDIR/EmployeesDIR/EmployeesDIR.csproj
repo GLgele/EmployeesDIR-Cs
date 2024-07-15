@@ -26,7 +26,7 @@
     <MinimumRequiredVersion>3.1.0.8</MinimumRequiredVersion>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>3.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -57,10 +57,10 @@
     <StartupObject>EmployeesDIR.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>970DDDC88DE2CEB18A163CCAF9B92C8ED0E5E80A</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>A079206CD5DCF6279F5EF0E4B77DA9FA09DE9D17</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>EmployeesDIR_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>EmployeesDIR_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -72,7 +72,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -203,6 +203,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="ErrorForm.cs">
       <SubType>Form</SubType>
@@ -233,10 +234,7 @@
     </Compile>
     <Compile Include="Shell.cs" />
     <Compile Include="trans.cs" />
-    <None Include="EmployeesDIR_1_TemporaryKey.pfx" />
-    <None Include="F:\GitHub\EmployeesDIR-Cs\EmployeesDIR\EmployeesDIR\EmployeesDIR_TemporaryKey.pfx">
-      <Link>EmployeesDIR_TemporaryKey.pfx</Link>
-    </None>
+    <None Include="EmployeesDIR_TemporaryKey.pfx" />
     <None Include="log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -265,7 +263,6 @@
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
-    <None Include="EmployeesDIR_TemporaryKey.pfx" />
     <Content Include="lang\en_us.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

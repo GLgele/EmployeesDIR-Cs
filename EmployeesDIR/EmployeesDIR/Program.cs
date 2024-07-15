@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace EmployeesDIR
 {
-    static class Program
+    static partial class Program
     {
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -24,7 +24,7 @@ namespace EmployeesDIR
         [STAThread]
         static void Main(string[] args)
         {
-            General.logger.Info("Entering application.");
+            Program.logger.Info("Entering application.");
 #if DEBUG
             //AllocConsole();
             //Application.SetHighDpiMode(HighDpiMode.SystemAware);
@@ -36,15 +36,15 @@ namespace EmployeesDIR
 #endif
             if (args.Contains("--debug"))
             {
-                General.logger.Warn("Debug Mode On!");
-                General.isRDebug = true;
+                Program.logger.Warn("Debug Mode On!");
+                Config.isRDebug = true;
                 AllocConsole();
             }
             //Shell.Shell.WriteLine("Info:infotest");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new EmployeesDIR());
-            General.logger.Info("Exiting application.");
+            Program.logger.Info("Exiting application.");
             //FreeConsole();
         }
     }

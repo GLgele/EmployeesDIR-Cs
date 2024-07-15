@@ -19,11 +19,11 @@ namespace EmployeesDIR
 
             InitializeComponent();
             this.FormClosing += new FormClosingEventHandler(Form_Closing);
-            if (General.config.Update.autoCheck) this.Shown += new EventHandler(General.CheckUpdate);
+            if (Config.config.Update.autoCheck) this.Shown += new EventHandler(Config.CheckUpdate);
         }
         private void EmployeesDIR_Load(object sender, EventArgs e)
         {
-            General.logger.InfoFormat("Root winform loading. Event{0}", e.ToString());
+            Program.logger.InfoFormat("Root winform loading. Event{0}", e.ToString());
 #if DEBUG
             debugToolStripMenuItem.Available = true;
             /*testDebugToolStripMenuItem.Available = true;
@@ -61,11 +61,11 @@ namespace EmployeesDIR
         private void Flush_Window()
         {
             listBox1.Items.Clear();
-            foreach (Employee emp in General.employees)
+            foreach (Employee emp in Program.employees)
             {
                 listBox1.Items.Add(emp.GetInfo()[0]);
             }
-            General.trans.Init(this);
+            Program.trans.Init(this);
             nameLabel.Text = "";
             sexLabel.Text = "";
             numberLabel.Text = "";
@@ -123,8 +123,8 @@ namespace EmployeesDIR
 
         private void ConfigReload()
         {
-            General.config = AppConfig.Get();
-            General.trans = new Trans();
+            Config.config = AppConfig.Get();
+            Program.trans = new Trans();
         }
 
         private void ConfigReload(object sender ,EventArgs e) 
@@ -135,14 +135,14 @@ namespace EmployeesDIR
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"EmployeesDIR\nVersion {General.cver.Major}.{General.cver.Minor}.{General.cver.Build}\nCopyright GLgele (c) 2022",General.title);
+            MessageBox.Show($"EmployeesDIR\nVersion {Config.cver.Major}.{Config.cver.Minor}.{Config.cver.Build}\nCopyright GLgele (c) 2022",Config.title);
             //Form errorform = new ErrorForm("aaa");
             //errorform.Show();
         }
 
         private void exitItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(General.trans.tr("Really want to exit?"), General.title, MessageBoxButtons.YesNo) == DialogResult.Yes) 
+            if (MessageBox.Show(Program.trans.tr("Really want to exit?"), Config.title, MessageBoxButtons.YesNo) == DialogResult.Yes) 
             {
                 Application.Exit();
             }
@@ -150,18 +150,18 @@ namespace EmployeesDIR
 
         private void saveItem_Click(object sender, EventArgs e)
         {
-            General.SaveData();
+            Program.SaveData();
         }
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            General.AppendEmployee("name","sex","number","comment","email","edu","salary");
+            Program.AppendEmployee("name","sex","number","comment","email","edu","salary");
             Flush_Window();
         }
 
         private void openItem_Click(object sender, EventArgs e)
         {
-            General.OpenData();
+            Program.OpenData();
             Flush_Window();
         }
 
@@ -174,13 +174,13 @@ namespace EmployeesDIR
         {
             if (listBox1.SelectedIndex != -1)
             {
-                nameLabel.Text = General.trans.tr("name")+": "+General.employees[listBox1.SelectedIndex].GetInfo()[0];
-                sexLabel.Text = General.trans.tr("sex") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[1];
-                numberLabel.Text = General.trans.tr("number") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[2];
-                commentLabel.Text = General.trans.tr("comment") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[3];
-                emailLabel.Text = General.trans.tr("email") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[4];
-                eduLabel.Text = General.trans.tr("edu") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[5];
-                salaryLabel.Text = General.trans.tr("salary") + ": " + General.employees[listBox1.SelectedIndex].GetInfo()[6];
+                nameLabel.Text = Program.trans.tr("name")+": "+Program.employees[listBox1.SelectedIndex].GetInfo()[0];
+                sexLabel.Text = Program.trans.tr("sex") + ": " + Program.employees[listBox1.SelectedIndex].GetInfo()[1];
+                numberLabel.Text = Program.trans.tr("number") + ": " + Program.employees[listBox1.SelectedIndex].GetInfo()[2];
+                commentLabel.Text = Program.trans.tr("comment") + ": " + Program.employees[listBox1.SelectedIndex].GetInfo()[3];
+                emailLabel.Text = Program.trans.tr("email") + ": " + Program.employees[listBox1.SelectedIndex].GetInfo()[4];
+                eduLabel.Text = Program.trans.tr("edu") + ": " + Program.employees[listBox1.SelectedIndex].GetInfo()[5];
+                salaryLabel.Text = Program.trans.tr("salary") + ": " + Program.employees[listBox1.SelectedIndex].GetInfo()[6];
             }
             editButton.Focus();
         }
@@ -206,20 +206,20 @@ namespace EmployeesDIR
                 editButton.Hide();
                 deleteButton.Hide();
                 newEButton.Hide();
-                nameLabel.Text = General.trans.tr("name");
-                sexLabel.Text = General.trans.tr("sex");
-                numberLabel.Text = General.trans.tr("number");
-                commentLabel.Text = General.trans.tr("comment");
-                emailLabel.Text = General.trans.tr("email");
-                eduLabel.Text = General.trans.tr("edu");
-                salaryLabel.Text = General.trans.tr("salary");
-                textBox1.Text = General.employees[listBox1.SelectedIndex].GetInfo()[0];
-                textBox2.Text = General.employees[listBox1.SelectedIndex].GetInfo()[1];
-                textBox3.Text = General.employees[listBox1.SelectedIndex].GetInfo()[2];
-                textBox4.Text = General.employees[listBox1.SelectedIndex].GetInfo()[3];
-                textBox5.Text = General.employees[listBox1.SelectedIndex].GetInfo()[4];
-                textBox6.Text = General.employees[listBox1.SelectedIndex].GetInfo()[5];
-                textBox7.Text = General.employees[listBox1.SelectedIndex].GetInfo()[6];
+                nameLabel.Text = Program.trans.tr("name");
+                sexLabel.Text = Program.trans.tr("sex");
+                numberLabel.Text = Program.trans.tr("number");
+                commentLabel.Text = Program.trans.tr("comment");
+                emailLabel.Text = Program.trans.tr("email");
+                eduLabel.Text = Program.trans.tr("edu");
+                salaryLabel.Text = Program.trans.tr("salary");
+                textBox1.Text = Program.employees[listBox1.SelectedIndex].GetInfo()[0];
+                textBox2.Text = Program.employees[listBox1.SelectedIndex].GetInfo()[1];
+                textBox3.Text = Program.employees[listBox1.SelectedIndex].GetInfo()[2];
+                textBox4.Text = Program.employees[listBox1.SelectedIndex].GetInfo()[3];
+                textBox5.Text = Program.employees[listBox1.SelectedIndex].GetInfo()[4];
+                textBox6.Text = Program.employees[listBox1.SelectedIndex].GetInfo()[5];
+                textBox7.Text = Program.employees[listBox1.SelectedIndex].GetInfo()[6];
             }
             stat = "edit";
             confirmButton.Focus();
@@ -261,12 +261,12 @@ namespace EmployeesDIR
             {
                 case "edit":
                     {
-                        General.employees[listBox1.SelectedIndex].ChangeInfo(tmp);
+                        Program.employees[listBox1.SelectedIndex].ChangeInfo(tmp);
                         break;
                     }
                 case "new":
                     {
-                        if(tmp[0]!="") General.AppendEmployee(tmp);
+                        if(tmp[0]!="") Program.AppendEmployee(tmp);
                         break;
                     }
             }
@@ -302,12 +302,13 @@ namespace EmployeesDIR
         {
             if (listBox1.SelectedIndex != -1)
                 if (MessageBox.Show(
-                        General.trans.tr("Really want to delete: ") +
-                        General.employees[listBox1.SelectedIndex].GetInfo()[0], General.title,
+                        Program.trans.tr("Really want to delete: ") +
+                        Program.employees[listBox1.SelectedIndex].GetInfo()[0], Config.title,
                         MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    General.employees.RemoveAt(listBox1.SelectedIndex);
-                    General.logger.InfoFormat("Employee deleted.{0}", General.employees[listBox1.SelectedIndex].GetInfo()[0]);
+                    var lst = Program.employees[listBox1.SelectedIndex].GetInfo();
+                    Program.logger.InfoFormat("Deleted employee:{0},id{1};{2},{3},{4},{5},{6},{7}", lst[0], Program.employees[listBox1.SelectedIndex].GetId(), lst[1], lst[2], lst[3], lst[4], lst[5], lst[6]);
+                    Program.employees.RemoveAt(listBox1.SelectedIndex);
                 }
             Flush_Window();
         }
@@ -334,13 +335,13 @@ namespace EmployeesDIR
             editButton.Hide();
             deleteButton.Hide();
             newEButton.Hide();
-            nameLabel.Text = General.trans.tr("name");
-            sexLabel.Text = General.trans.tr("sex");
-            numberLabel.Text = General.trans.tr("number");
-            commentLabel.Text = General.trans.tr("comment");
-            emailLabel.Text = General.trans.tr("email");
-            eduLabel.Text = General.trans.tr("edu");
-            salaryLabel.Text = General.trans.tr("salary");
+            nameLabel.Text = Program.trans.tr("name");
+            sexLabel.Text = Program.trans.tr("sex");
+            numberLabel.Text = Program.trans.tr("number");
+            commentLabel.Text = Program.trans.tr("comment");
+            emailLabel.Text = Program.trans.tr("email");
+            eduLabel.Text = Program.trans.tr("edu");
+            salaryLabel.Text = Program.trans.tr("salary");
             stat = "new";
         }
 
