@@ -9,7 +9,7 @@ namespace EmployeesDIR
     {
         public static bool isRDebug = false;
         private static readonly string[] scver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString().Split('.');
-        public static readonly Version cver = new Version(Convert.ToInt32(scver[0]), Convert.ToInt32(scver[1]), Convert.ToInt32(scver[2]));
+        public static readonly Version cver = new Version(Convert.ToInt32(scver[0]), Convert.ToInt32(scver[1]), Convert.ToInt32(scver[2]), Convert.ToInt32(scver[3]));
         public static readonly string title = $"EmployeesDIR - {cver.Major}.{cver.Minor}";
         public static string iniFilePath = "config.ini";
         public static AppConfig config = AppConfig.Get();
