@@ -56,6 +56,11 @@ namespace EmployeesDIR
             confirmButton.Hide();
             cancelButton.Hide();
             editButton.Focus();
+            if (Config.config.Database.connection == "")
+            {
+                var connectForm = new DBConnectForm();
+                confirmButton.Show();
+            }
         }
 
         private void Flush_Window()

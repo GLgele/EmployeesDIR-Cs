@@ -1,5 +1,7 @@
 using System;
+using System.Data.Entity.Core.EntityClient;
 using System.Windows.Forms;
+using Microsoft.Extensions.Logging;
 
 namespace EmployeesDIR
 {
@@ -40,7 +42,10 @@ namespace EmployeesDIR
 
         private void testConnectionButton_Click(object sender, EventArgs e)
         {
-            
+            Program.logger.DebugFormat(
+                "Testing database connection. Connection string: {0}",
+                connectionStringTextBox.Text
+            );
         }
         private void confirmButton_Click(object sender, EventArgs e)
         {
@@ -67,6 +72,14 @@ namespace EmployeesDIR
                     break;
                 }
             }
+        }
+
+        private void connectionStringTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Config.config.Database.connection = connectionStringTextBox.Text;
+            Config.SaveConfig();
+            Program.logger.DebugFormat("Connection string changed to {0}",connectionStringTextBox.Text);
+            
         }
     }
 }

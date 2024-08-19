@@ -83,6 +83,7 @@ namespace EmployeesDIR
             this.connectionStringTextBox.Size = new System.Drawing.Size(630, 25);
             this.connectionStringTextBox.TabIndex = 3;
             this.connectionStringTextBox.Tag = "DNT";
+            this.connectionStringTextBox.TextChanged += new System.EventHandler(this.connectionStringTextBox_TextChanged);
             // 
             // testConnectionButton
             // 

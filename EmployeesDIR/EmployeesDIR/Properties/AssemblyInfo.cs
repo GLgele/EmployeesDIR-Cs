@@ -33,9 +33,10 @@ using System.Runtime.InteropServices;
 //可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值
 //通过使用 "*"，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.2.1.12")]
-[assembly: AssemblyFileVersion("3.2.1.12(20221227)")]
-[assembly: NeutralResourcesLanguage("zh-CN")]
+[assembly: AssemblyVersion("3.3.0.15")]
+[assembly: AssemblyFileVersion("3.3.0.15(20240716)")]
+//[assembly: NeutralResourcesLanguage("zh-CN")]
+[assembly: NeutralResourcesLanguage("en-US")]
 
 // Apache
 // 

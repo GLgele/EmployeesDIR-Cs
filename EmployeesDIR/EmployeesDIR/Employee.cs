@@ -14,7 +14,7 @@ using Mylog;
 
 namespace EmployeesDIR
 {
-    class Employee
+    public class Employee
     {
         private int id;
         private string name;
