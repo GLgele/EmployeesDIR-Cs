@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -56,11 +57,21 @@ namespace EmployeesDIR
             confirmButton.Hide();
             cancelButton.Hide();
             editButton.Focus();
-            if (Config.config.Database.connection == "")
+            try
+            {
+                if (Config.config.Database.connection == "")
+                {   
+                    var connectForm = new DBConnectForm();
+                    confirmButton.Show();
+                }
+            }
+            catch (Exception)
             {
                 var connectForm = new DBConnectForm();
                 confirmButton.Show();
+                //throw;
             }
+            
         }
 
         private void Flush_Window()
@@ -71,6 +82,7 @@ namespace EmployeesDIR
                 listBox1.Items.Add(emp.GetInfo()[0]);
             }
             Program.trans.Init(this);
+            Text = Config.title;
             nameLabel.Text = "";
             sexLabel.Text = "";
             numberLabel.Text = "";
@@ -140,7 +152,7 @@ namespace EmployeesDIR
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"EmployeesDIR\nVersion {Config.cver.Major}.{Config.cver.Minor}.{Config.cver.Build}\nCopyright GLgele (c) 2024",Config.title);
+            MessageBox.Show($"EmployeesDIR\nVersion {Config.cver.Major}.{Config.cver.Minor}.{Config.cver.Build}\n{Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyCopyrightAttribute>().Copyright}",Config.title);
             //Form errorform = new ErrorForm("aaa");
             //errorform.Show();
         }

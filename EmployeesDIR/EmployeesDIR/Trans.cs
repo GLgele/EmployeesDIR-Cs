@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 namespace EmployeesDIR
 {
     //[Obsolete]
-    /// <summary>
+    /// </summary>
     /// 不再使用 改为winform多语言
     /// </summary>
     class Trans
@@ -100,7 +100,7 @@ namespace EmployeesDIR
                 }
                 catch (Exception)
                 {
-                    Program.logger.WarnFormat("Translate string not found! Source:({0})", s);
+                    Program.logger.WarnFormat("Translation string not found! Source:({0})", s);
                     if (!s.Contains(".")) return s;
                     return "";
                 }
@@ -118,14 +118,16 @@ namespace EmployeesDIR
                 {
                     foreach (ToolStripItem item in menuItem.DropDownItems)
                     {
-                        string tmps = tr("Form.Item".Replace("Form", form.Name).Replace("Item", item.Name));
+                        //string tmps = tr("Form.Item".Replace("Form", form.Name).Replace("Item", item.Name));
+                        string tmps = tr($"{form.Name}.{item.Name}");
                         if (tmps != "")
                         {
                             item.Text = tmps;
                         }
                     }
 
-                    string tmp = tr("Form.Item".Replace("Form", form.Name).Replace("Item", menuItem.Name));
+                    //string tmp = tr("Form.Item".Replace("Form", form.Name).Replace("Item", menuItem.Name));
+                    string tmp = tr($"{form.Name}.{menuItem.Name}");
                     if (tmp != "")
                     {
                         menuItem.Text = tmp;
@@ -151,7 +153,8 @@ namespace EmployeesDIR
                 }
                 else
                 {
-                    string tmp = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
+                    //string tmp = tr("Form.Control".Replace("Form", form.Name).Replace("Control", control.Name));
+                    string tmp = tr($"{form.Name}.{control.Name}");
                     if (tmp != "")
                     {
                         control.Text = tmp;

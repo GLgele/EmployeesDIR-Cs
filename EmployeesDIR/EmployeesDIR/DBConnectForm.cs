@@ -17,7 +17,7 @@ namespace EmployeesDIR
             //throw new System.NotImplementedException();
             Program.logger.DebugFormat("Login form loaded. Args: {0}",e.ToString());
             Program.trans.Init(this);
-            comboBox1.SelectedItem = Config.config.Database.dbType;
+            typeComboBox.SelectedItem = Config.config.Database.dbType;
             connectionStringTextBox.Text = Config.config.Database.connection;
         }
 
@@ -49,7 +49,7 @@ namespace EmployeesDIR
         }
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            Config.config.Database.dbType = comboBox1.SelectedItem.ToString();
+            Config.config.Database.dbType = typeComboBox.SelectedItem.ToString();
             Config.config.Database.connection = connectionStringTextBox.Text;
             Config.SaveConfig();
             cancelButton_Click(sender,e);
@@ -57,7 +57,7 @@ namespace EmployeesDIR
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboBox1.SelectedItem.ToString())
+            switch (typeComboBox.SelectedItem.ToString())
             {
                 case "SQLite":
                 {

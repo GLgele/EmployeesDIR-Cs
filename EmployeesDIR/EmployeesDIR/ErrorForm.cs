@@ -58,7 +58,7 @@ namespace EmployeesDIR
         {
             Clipboard.SetText(errorLabel.Text);
             Program.logger.InfoFormat("Set clipborad text: {0}",errorLabel.Text);
-            MessageBox.Show("Message copied.", Config.title, MessageBoxButtons.OK);
+            MessageBox.Show(Program.trans.tr("Message copied."), Config.title, MessageBoxButtons.OK);
         }
 
         private void ErrorForm_Load(object sender, EventArgs e)

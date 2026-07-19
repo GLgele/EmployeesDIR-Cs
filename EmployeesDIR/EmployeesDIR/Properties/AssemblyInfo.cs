@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dream Border X")]
 [assembly: AssemblyProduct("EmployeesDIR")]
-[assembly: AssemblyCopyright("Copyright ©  GLgele 2022")]
+[assembly: AssemblyCopyright("Copyright ©  KeyFac 2022-2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -34,7 +34,7 @@ using System.Runtime.InteropServices;
 //通过使用 "*"，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("3.3.0.15")]
-[assembly: AssemblyFileVersion("3.3.0.15(20240824)")]
+[assembly: AssemblyFileVersion("3.3.0.15(20260719)")]
 //[assembly: NeutralResourcesLanguage("zh-CN")]
 [assembly: NeutralResourcesLanguage("en-US")]
 

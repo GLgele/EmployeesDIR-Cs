@@ -120,6 +120,7 @@ namespace EmployeesDIR
                 BinaryReader file = new BinaryReader(new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read));
                 int n = Convert.ToInt32(file.ReadInt32());
                 byte[] fw = file.ReadBytes(2);
+                Program.employees.Clear();
                 for (int i = 0; i < n; i++)
                 {
                     List<string> lst = new List<string>();

@@ -17,6 +17,9 @@
 	"SettingsForm.checkUpdateBox": "启动时检查更新",
 	"SettingsForm.languageComboBox": "",
 	"SettingsForm.downloadComboBox": "",
+	"SettingsForm.dbLabel": "数据库",
+	"SettingsForm.usingLabel": "当前类型：",
+	"SettingsForm.dbSetButton": "数据库设置",
 	"EmployeesDIR.listBox1": "",
 	"EmployeesDIR.editButton": "编辑",
 	"EmployeesDIR.menuStrip": "",
@@ -42,5 +45,7 @@
 	"EmployeesDIR.newEButton": "新员工",
 	"EmployeesDIR.editInfoToolStripMenuItem": "编辑员工信息",
 	"EmployeesDIR.deleteEmployeeToolStripMenuItem": "删除该员工",
-	"Really want to delete: ": "确认删除员工："
+	"Really want to delete: ": "确认删除员工：",
+	"Message copied.": "消息已复制到剪贴板"
+
 }

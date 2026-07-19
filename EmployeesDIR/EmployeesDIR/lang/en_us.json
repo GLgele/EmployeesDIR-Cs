@@ -17,6 +17,9 @@
   "SettingsForm.checkUpdateBox": "Check updates when starting",
   "SettingsForm.languageComboBox": "",
   "SettingsForm.downloadComboBox": "",
+  "SettingsForm.dbLabel": "Database",
+  "SettingsForm.usingLabel": "Using:",
+  "SettingsForm.dbSetButton": "Database Settings",
   "EmployeesDIR.listBox1": "",
   "EmployeesDIR.editButton": "Edit",
   "EmployeesDIR.menuStrip": "",
@@ -42,5 +45,6 @@
   "EmployeesDIR.newEButton": "New",
   "EmployeesDIR.editInfoToolStripMenuItem": "Edit Info",
   "EmployeesDIR.deleteEmployeeToolStripMenuItem": "Delete Employee",
-  "Really want to delete: ": "Really want to delete: "
+  "Really want to delete: ": "Really want to delete: ",
+  "Message copied.": "Message copied."
 }

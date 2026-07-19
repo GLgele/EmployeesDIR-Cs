@@ -249,11 +249,17 @@
     <None Include="[Obsolete]\GithubRelease.cs" />
     <Compile Include="[Obsolete]\TextEventArgs.cs" />
     <None Include="[Obsolete]\WebApi.cs" />
+    <EmbeddedResource Include="ErrorForm.en-001.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ErrorForm.resx">
       <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DBConnectForm.resx">
       <DependentUpon>DBConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorForm.zh-Hans.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Root.resx">
       <DependentUpon>Root.cs</DependentUpon>
